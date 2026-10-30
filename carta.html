@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra carta</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style type="text/tailwindcss">
+    @theme {
+        --color-granate: #681211;
+        --color-crema: #FAFAF1;
+
+        --font-titulo: "Anton", sans-serif;
+        --font-texto: "Barlow", sans-serif;
+    }
+</style>
+
+</head>
+
+<body>
+    
+    <main>
+
+<section class="bg-granate text-crema min-h-screen flex items-center">
+
+    <div class="w-full max-w-none mx-auto pl-36">
+
+        <!-- Título principal -->
+        <div class="relative">
+
+            <h1 class="font-titulo text-[16rem] uppercase leading-none">
+                Disfruta de
+            </h1>
+
+            <h2 class="font-titulo text-[5rem] uppercase leading-none">
+                Nuestros sabores más tradicionales
+            </h2>
+
+        <!-- Descripción -->
+        <p class="font-texto text-base leading-relaxed mt-6 max-w-5xl">
+            Desde 1988 compartimos nuestra pasión por las pizzas, elaborando combinaciones que forman parte de nuestra historia.
+            Apostamos por los sabores de siempre, esos que nunca pasan de moda y que nos gusta seguir compartiendo con vosotros, generación tras generación.
+        </p>
+
+        <!-- Enlace -->
+        <a href="#carta" class="ver-carta font-texto">
+            Ver carta 
+        </a>
+
+    </div>
+
+</section>
+
+    </main>
+
+</body>
+
+</html>
