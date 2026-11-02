@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra carta</title>
+
+    <!-- 1. Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- 2. CSS propio -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 3. Tailwind desde el CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Librería JS extra (pendiente) -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- 4. Sistema de diseño -->
+    <style type="text/tailwindcss">
+        @theme static {
+            --color-granate: #681211;
+            --color-crema: #FAFAF1;
+
+            --font-titulo: "Anton", sans-serif;
+            --font-texto: "Barlow", sans-serif;
+
+            --text-portada-sm: 5.5rem;
+            --text-portada-md: 10rem;
+            --text-portada-xl: 14rem;
+
+            --text-sub-m: 3.5rem;
+            --text-sub-l: 4rem;
+            --text-sub-xl: 5rem;
+
+            --leading-ajustado: 1.05;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="bg-granate text-crema min-h-screen flex items-center overflow-hidden">
+
+            <div class="w-full px-6 flex flex-col items-center text-center md:items-start md:text-left md:px-12 lg:pl-36 lg:pr-12">
+                <h1 class="font-titulo uppercase leading-none text-portada-sm sm:text-9xl md:text-portada-md xl:text-portada-xl">
+                    Disfruta <span class="hidden lg:inline">de</span>
+                </h1>
+
+                <h2 class="font-titulo uppercase leading-ajustado text-5xl sm:text-sub-m md:text-sub-l lg:text-sub-m xl:text-sub-xl">
+                    <span class="lg:hidden">de</span> nuestros sabores más tradicionales
+                </h2>
+
+                <p class="font-texto text-base md:text-lg leading-relaxed mt-6 max-w-xl lg:max-w-3xl">
+                    Desde 1988 compartimos nuestra pasión por las pizzas, elaborando combinaciones que forman parte de nuestra historia.Apostamos por los sabores de siempre, esos que nunca pasan de moda y que nos gusta seguir compartiendo con vosotros, generación tras generación.
+                </p>
+
+                
+                <a href="#carta" class="ver-carta font-texto">Ver carta
+                        <!-- Subrayado a mano -->
+                    <svg class="ver-carta__linea" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295.35 12.12"
+                    preserveAspectRatio="none" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M292.42,11.55c-29.14-6.68-71.66-8.91-102.59-8.95l-83.07-.11L.04,5.9l-.04-2.52L131.71.08,171.9,0c30.96-.06,61.16.88,91.95,3.96,10.99,1.32,20.86,3.02,31.46,5.76.07.88.06,2.51-.43,2.4l-2.47-.57Z"/>
+                </svg>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- PIZZA DEL MES -->
+        <section class="relative bg-crema text-granate min-h-screen px-6 py-16 overflow-hidden lg:px-12 lg:flex lg:items-center">
+
+            <div class="relative w-full lg:flex lg:justify-center lg:items-center">
+
+                <!-- Texto -->
+                <div class="relative z-10 pointer-events-none md:pointer-events-none text-center lg:text-left lg:w-96 xl:w-128 2xl:w-144 lg:shrink-0">
+
+                    <h2 class="font-titulo uppercase leading-none text-7xl sm:text-8xl md:text-9xl lg:text-8xl xl:text-9xl">
+                        Descubre
+                        <br>
+                        nuestra
+                        <br>
+                        pizca
+                        <br>
+                        del mes
+                    </h2>
+
+                    <p class="font-texto text-base md:text-lg lg:text-xl leading-relaxed mt-10 mx-auto lg:mx-0 max-w-xl lg:max-w-lg">
+                        Este mes recuperamos una de nuestras combinaciones más especiales: la pizza 25 años. Jamón de york, bacon, cebolla (si te gusta) y un toque suave de salsa barbacoa que le da ese punto ahumado y ligeramente dulce que engancha desde el primer bocado.
+                    </p>
+
+                </div>
+
+                <!-- Imagen de la pizza -->
+                <div id="pizza-movible"class="absolute left-1/2 ml-20 top-36 w-22 sm:ml-28 sm:top-48 sm:w-28 md:ml-40 md:top-64 md:w-40 lg:static lg:w-120 lg:max-w-none lg:shrink-0 lg:-ml-24 lg:-translate-y-26 xl:w-150 2xl:w-180">
+                    <img src="imagenes/pizza-25-anos.webp" alt="Pizza del mes" class="w-full block">
+                </div>
+
+            </div>
+
+            <!-- Flecha hacia la carta -->
+            <a href="#carta" class="flecha-carta absolute bottom-6 left-1/2 -translate-x-1/2 w-10 h-10 flex items-center justify-center"
+            aria-label="Ir a la carta">
+                <svg class="flecha-carta__icono w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M5 6l7 7 7-7"/>
+                    <path d="M5 12l7 7 7-7"/>
+                </svg>
+            </a>
+
+        </section>
+
+
+        <!-- CARTA -->
+        <section id="carta" class="bg-granate text-crema px-6 py-16 overflow-hidden lg:px-12">
+
+            <h2 class="sr-only">Nuestra carta</h2>
+
+            <div class="flex flex-col gap-16 lg:gap-8">
+
+                <!-- MARGARITA -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-margarita.webp" alt="Pizza Margarita" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Margarita</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        La pizza de toda la vida, sencilla y deliciosa. La combinación del tomate, la mozzarella fundida y el aroma del orégano crea un sabor equilibrado que demuestra que no hace falta complicarse para disfrutar de una buena pizza.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- D'YORK -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-dyork.webp" alt="Pizza D'York" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">D'York</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        Una apuesta segura para quienes disfrutan de los sabores clásicos. El jamón de york se combina con el tomate, la mozzarella fundida y el orégano para dar lugar a una pizza suave, sabrosa y perfecta para compartir en cualquier ocasión.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- CUATRO QUESOS -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-4quesos.webp" alt="Pizza Cuatro quesos" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Cuatro quesos</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        Cuatro variedades de queso se unen para crear una combinación llena de matices. La mozzarella, el queso azul, el edam y el cheddar aportan diferentes intensidades y texturas, dando como resultado una pizza cremosa y con mucho carácter, ideal para los auténticos amantes del queso.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- D'BACON -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-bacon.webp" alt="Pizza D'Bacon" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">D'Bacon</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        El bacon es el protagonista de esta pizza, aportando ese sabor intenso y tan característico que combina a la perfección con nuestra base de tomate, mozzarella y orégano. Una opción sencilla, pero llena de personalidad, pensada para quienes disfrutan de los sabores más contundentes.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- COLORÁ -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-colora.webp" alt="Pizza Colorá" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Colorá</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        Una pizza con carácter, en la que el chorizo comparte protagonismo con el pimiento rojo y la cebolla. La combinación reúne sabores intensos y matices ligeramente dulces, creando una mezcla sabrosa y llena de personalidad para quienes buscan algo diferente sin renunciar a los ingredientes de siempre.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- SERRANA -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-serrana.webp" alt="Pizza Serrana" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Serrana</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        El bacon y el champiñón se encuentran en una combinación que destaca por el contraste entre el sabor intenso de la carne y los matices suaves del champiñón. Junto con el tomate, la mozzarella y el orégano, forman una pizza equilibrada, sabrosa y perfecta para disfrutar hasta el último trozo.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- ROMANA -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-romana.webp" alt="Pizza Romana" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Romana</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        El sabor intenso y ligeramente salino de las anchoas se combina con una doble ración de mozzarella, que aporta cremosidad y equilibra el conjunto. Una pizza con personalidad propia, ideal para quienes disfrutan de los sabores marineros y de las combinaciones clásicas con un toque más intenso.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- PIZCA -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-pizca.webp" alt="Pizza Pizca" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Pizca</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        Nuestra pizza Pizca reúne atún, pimiento rojo, cebolla y aceitunas en una combinación llena de sabor y contrastes. Los ingredientes se complementan con la base de tomate y mozzarella, creando una propuesta que mezcla los sabores del mar con los matices de la huerta y que invita a probar algo diferente.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- TUMACA -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-tumaca.webp" alt="Pizza Tumaca" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Tumaca</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        Una combinación que destaca por la frescura del tomate en rodajas, acompañado de jamón serrano o atún, según lo que más te apetezca. El suave toque de ajo completa la mezcla y aporta un matiz aromático que realza el sabor de los ingredientes sin quitarles protagonismo.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- VEGETAL -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-vegetal.webp" alt="Pizza Vegetal" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Vegetal</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        Una opción llena de color y sabor, elaborada con champiñón, pimiento rojo, cebolla y aceitunas. Cada ingrediente aporta sus propios matices y se combina con el tomate, la mozzarella y el orégano para crear una pizza variada y sabrosa, perfecta para quienes disfrutan de las verduras sobre una buena base de pizza.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- TROPICAL -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-tropical.webp" alt="Pizza Tropical" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Tropical</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        Para quienes disfrutan de los contrastes, esta pizza combina la dulzura de la piña con el sabor del jamón serrano o de york. El resultado es una mezcla de matices dulces y salados que aporta un toque diferente a nuestra base tradicional y convierte cada porción en una combinación llena de personalidad.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- 25 AÑOS -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-25-anos.webp" alt="Pizza 25 años" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">25 años</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        Una combinación pensada para los amantes de los sabores intensos y las pizzas con un toque especial. El jamón de york y el bacon se acompañan de cebolla opcional y una suave salsa barbacoa, que aporta un matiz ahumado y ligeramente dulce. Una mezcla sabrosa y con carácter, perfecta para quienes buscan algo más contundente.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+                <!-- 30 AÑOS -->
+                <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
+                    <div class="w-64 sm:w-80 lg:w-96 lg:shrink-0 xl:w-112">
+                        <img src="imagenes/pizza-30-anos.webp" alt="Pizza 30 años" class="w-full block">
+                    </div>
+                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">30 años</h3>
+                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                        Una pizza diferente, donde los sabores se mezclan para crear una combinación sorprendente. El chorizo ligeramente picante aporta intensidad, mientras que la piña introduce un contraste dulce que suaviza el conjunto. El toque final de ajo completa esta propuesta original, pensada para quienes disfrutan probando mezclas atrevidas.
+                        </p>
+                        <button type="button" class="btn-cesta font-texto mt-6">Añadir a la cesta</button>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

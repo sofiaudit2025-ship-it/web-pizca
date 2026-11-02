@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra historia</title>
+
+    <!-- 1. Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- 2. CSS propio -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 3. Tailwind desde el CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Librería JS extra: AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- 4. Sistema de diseño (el mismo que en la primera página) -->
+    <style type="text/tailwindcss">
+        @theme static {
+            --color-granate: #681211;
+            --color-crema: #FAFAF1;
+
+            --font-titulo: "Anton", sans-serif;
+            --font-texto: "Barlow", sans-serif;
+
+            --text-hist-sm: 4.5rem;
+            --text-hist-md: 7rem;
+            --text-hist-xl: 9rem;
+
+            --text-cifra-sm: 2rem;
+            --text-cifra-xl: 3.5rem;
+
+            --leading-ajustado: 1.05;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <!-- PORTADA DE LA HISTORIA -->
+        <section class="relative bg-granate text-crema min-h-screen flex items-center justify-center overflow-hidden px-6 py-16">
+
+            <!-- Foto de fondo teñida de granate -->
+            <img src="imagenes/historia-portada.webp" alt="" aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-granate/85" aria-hidden="true"></div>
+
+            <div class="relative z-10 flex flex-col items-center text-center max-w-4xl">
+                <h1 class="font-titulo uppercase leading-ajustado text-hist-sm sm:text-hist-md xl:text-hist-xl">
+                    Una Pizca de historia,
+                </h1>
+
+                <h2 class="font-titulo uppercase leading-ajustado text-5xl sm:text-6xl md:text-7xl xl:text-8xl mt-2">
+                    mucho que contar.
+                </h2>
+
+                <p class="font-texto text-base md:text-lg leading-relaxed mt-6 max-w-md md:max-w-xl">
+                    Desde 1988, haciendo pizzas a nuestra manera y convirtiendo cada visita en algo más que una cena
+                </p>
+
+                <!-- Flecha hacia las cifras -->
+                <a href="#cifras" class="flecha-historia mt-8 w-10 h-10 flex items-center justify-center"
+                    aria-label="Ir a nuestras cifras">
+                    <svg class="flecha-carta__icono w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M5 6l7 7 7-7" />
+                        <path d="M5 12l7 7 7-7" />
+                    </svg>
+                </a>
+            </div>
+
+        </section>
+
+
+        
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/historia.js"></script>
+
+</body>
+
+</html>
