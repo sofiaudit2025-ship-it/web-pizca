@@ -46,11 +46,14 @@
         <!-- PORTADA DE LA HISTORIA -->
         <section class="relative bg-granate text-crema min-h-screen flex items-center justify-center overflow-hidden px-6 py-16">
 
-            <!-- Foto de fondo teñida de granate -->
-            <img src="imagenes/historia-portada.webp" alt="" aria-hidden="true"
+            <!-- 1. Imagen de fondo (capa de abajo) -->
+            <img src="imagenes/portada-sobre-nosotros" alt="" aria-hidden="true"
                 class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-granate/85" aria-hidden="true"></div>
 
+            <!-- 2. Capa granate con opacidad (encima de la imagen) -->
+            <div class="absolute inset-0 bg-granate/75" aria-hidden="true"></div>
+
+            <!-- 3. Contenido (encima de todo) -->
             <div class="relative z-10 flex flex-col items-center text-center max-w-4xl">
                 <h1 class="font-titulo uppercase leading-ajustado text-hist-sm sm:text-hist-md xl:text-hist-xl">
                     Una Pizca de historia,
@@ -65,7 +68,7 @@
                 </p>
 
                 <!-- Flecha hacia las cifras -->
-                <a href="#cifras" class="flecha-historia mt-8 w-10 h-10 flex items-center justify-center"
+                <a href="#cifras" class="flecha-carta mt-8 w-10 h-10 flex items-center justify-center"
                     aria-label="Ir a nuestras cifras">
                     <svg class="flecha-carta__icono w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -78,6 +81,77 @@
 
         </section>
 
+                <!-- CIFRAS -->
+        <section id="cifras" class="bg-crema text-granate px-6 py-16 overflow-hidden lg:px-12 lg:py-24">
+
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Título con estrella -->
+                <div class="relative w-fit mx-auto text-center" data-aos="fade-up">
+                    <h2 class="font-titulo uppercase leading-ajustado text-6xl sm:text-7xl md:text-8xl">
+                        Una pizca,
+                        <br>
+                        <span class="text-3xl sm:text-5xl md:text-6xl">de nuestras cifras.</span>
+                    </h2>
+
+                    <!-- Estrella decorativa -->
+                    <svg class="estrella absolute -top-1 -right-7 w-9 h-9 sm:-top-2 sm:-right-12 sm:w-14 sm:h-14 md:-right-16 md:w-16 md:h-16"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                        stroke-width="3" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M50 2 L58.4 29.7 L83.9 16.1 L70.3 41.6 L98 50 L70.3 58.4 L83.9 83.9 L58.4 70.3 L50 98 L41.6 70.3 L16.1 83.9 L29.7 58.4 L2 50 L29.7 41.6 L16.1 16.1 L41.6 29.7 Z" />
+                    </svg>
+                </div>
+
+                <!-- Cifras: 1 columna en móvil, 3 columnas en escritorio -->
+                <ul class="grid grid-cols-1 gap-y-12 mt-14 text-center md:grid-cols-3 md:gap-x-8 md:gap-y-14 md:mt-16">
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            <span data-contador data-prefijo="+ " data-destino="30">+ 30</span> años
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">de experiencia pizzera</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            <span data-contador data-prefijo="+ " data-destino="1000">+ 1000</span> expos
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Realizadas en nuestro local</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            <span data-contador data-prefijo="+ " data-destino="20">+ 20</span> sabores
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Sabores para encontrar tu favorita</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            <span data-contador data-sufijo="%" data-destino="100">100%</span> barrio
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Una pizzería con mucha personalidad</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            <span data-contador data-destino="1">1</span> tren
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Con destino a tus pedidos</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            <span data-contador data-prefijo="+" data-destino="365">+365</span> días
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Con ganas de pizza</p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
 
         
 
