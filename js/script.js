@@ -31,3 +31,10 @@ AOS.init({
         return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     }
 });
+
+if ($('#resenas').length && $(window).width() >= 768) {
+    $('#resenas li').draggable({
+        containment: '#resenas',
+        stack: '#resenas li'
+    });
+}
