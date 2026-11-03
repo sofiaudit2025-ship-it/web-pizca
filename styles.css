@@ -102,3 +102,26 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Cifras: pequeño efecto al pasar el ratón */
+@layer components {
+    .cifra {
+        transition: transform 0.3s;
+    }
+
+    .cifra:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* Giro de la estrella (la clase .estrella no tenía su @keyframes) */
+@keyframes estrella-giro {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .estrella,
+    .flecha-carta__icono {
+        animation: none;
+    }
+}
