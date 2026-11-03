@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra historia</title>
+
+    <!-- 1. Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- 2. CSS propio -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 3. Tailwind desde el CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Librería JS extra: AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- 4. Sistema de diseño (el mismo que en la primera página) -->
+    <style type="text/tailwindcss">
+        @theme static {
+            --color-granate: #681211;
+            --color-crema: #FAFAF1;
+
+            --font-titulo: "Anton", sans-serif;
+            --font-texto: "Barlow", sans-serif;
+
+            --text-hist-sm: 4.5rem;
+            --text-hist-md: 7rem;
+            --text-hist-xl: 9rem;
+
+            --text-cifra-sm: 2rem;
+            --text-cifra-xl: 3.5rem;
+
+            --leading-ajustado: 1.05;
+            --leading-compacto: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <!-- PORTADA DE LA HISTORIA -->
+        <section class="relative bg-granate text-crema min-h-screen flex items-center justify-center overflow-hidden px-6 py-16">
+
+            <!-- 1. Imagen de fondo (capa de abajo) -->
+            <img src="imagenes/elaboracion.webp" alt="" aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover">
+
+            <!-- 2. Capa granate con opacidad (encima de la imagen) -->
+            <div class="absolute inset-0 bg-granate/75" aria-hidden="true"></div>
+
+            <!-- 3. Contenido (encima de todo) -->
+            <div class="relative z-10 flex flex-col items-center text-center max-w-4xl">
+                <h1 class="font-titulo uppercase leading-ajustado text-hist-sm sm:text-hist-md xl:text-hist-xl">
+                    Una Pizca de historia,
+                </h1>
+
+                <h2 class="font-titulo uppercase leading-ajustado text-5xl sm:text-6xl md:text-7xl xl:text-8xl mt-2">
+                    mucho que contar.
+                </h2>
+
+                <p class="font-texto text-base md:text-lg leading-relaxed mt-6 max-w-md md:max-w-xl">
+                    Desde 1988, haciendo pizzas a nuestra manera y convirtiendo cada visita en algo más que una cena
+                </p>
+
+                <!-- Flecha hacia las cifras -->
+                <a href="#cifras" class="flecha-carta mt-8 w-10 h-10 flex items-center justify-center"
+                    aria-label="Ir a nuestras cifras">
+                    <svg class="flecha-carta__icono w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M5 6l7 7 7-7" />
+                        <path d="M5 12l7 7 7-7" />
+                    </svg>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- CIFRAS -->
+        <section id="cifras" class="bg-crema text-granate min-h-screen px-6 py-16 overflow-hidden lg:px-12 lg:py-24">
+
+            <div class="max-w-6xl mx-auto">
+
+                        
+        <div class="relative w-fit mx-auto text-center" data-aos="fade-up">
+                <h2 class="font-titulo uppercase leading-[0.9] text-6xl sm:text-7xl md:text-8xl">
+                    Una pizca
+                    <span class="block leading-[0.85] text-3xl sm:text-5xl md:text-6xl">de nuestras cifras</span>
+                </h2>
+
+                    <svg class="absolute -top-3 -right-8 h-10 w-auto sm:-top-4 sm:-right-12 sm:h-14 md:-top-6 md:-right-24 md:h-24 lg:-right-28 lg:h-28"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.97 71.54" fill="currentColor"
+                        aria-hidden="true" focusable="false">
+                        <path d="M42.44,50.62l-.21,20.92-10.72-17.49-14.26,17.44,2.67-23.04L1.82,54.19l13.97-16.68L0,28.19l19.52-3.19c-.85-8.47-1.64-15.58-2.05-24.99,5.52,6.86,9.12,12.61,13.79,19.49L42.75,2.67c-.03,7.18-.31,11.34-.86,18.45l19.18-5.3-13.21,14.46,18.11,4.34-16.82,5.86,14.63,16.99-21.34-6.85ZM40.65,48.5l17.86,5.58-11.89-14.4,13.23-4.62-14.83-4.03,10.77-12.08-15.62,4.73.83-16.15-9.44,14.68L19.17,4.7l2.08,21.66-16.41,2.75,13.22,7.85-11.11,13.69,14.64-4.05-1.99,19.49,12.19-14.65,8.99,14.85-.12-17.78Z" />
+                    </svg>
+        </div>
+
+                <!-- Cifras: 1 columna en móvil, 3 columnas en escritorio -->
+                <ul class="grid grid-cols-1 gap-y-12 mt-24 text-center md:grid-cols-3 md:gap-x-4 md:gap-y-14 md:mt-32">
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            + 30 años
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">de experiencia pizzera</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            + 1000 expos
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Realizadas en nuestro local</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            + 20 sabores
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Sabores para encontrar tu favorita</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            100% barrio
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Una pizzería con mucha personalidad</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            1 tren
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Con destino a tus pedidos</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            +365 días
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Con ganas de pizza</p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>   
+        
+        <!-- UNA HISTORIA QUE SE SIGUE AMASANDO -->
+        <section id="historia" class="relative bg-granate text-crema px-6 py-20 overflow-hidden lg:px-12 lg:py-28">
+
+            <div class="max-w-6xl mx-auto flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-16">
+
+                <!-- Título con rayitas decorativas -->
+                <div class="relative text-center lg:text-left lg:w-1/2" data-aos="fade-right">
+
+                    <!-- Rayitas arriba a la izquierda -->
+                    <svg class="absolute -top-8 -left-2 w-8 h-8 lg:-top-10 lg:-left-8 lg:w-10 lg:h-10"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false">
+                        <path d="M4 4 L20 22" />
+                        <path d="M16 2 L28 14" />
+                    </svg>
+
+                    <h2 class="font-titulo uppercase leading-[0.9] text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
+                        <span class="block">Una historia</span>
+                        <span class="block">que se sigue</span>
+                        <span class="block">amasando</span>
+                    </h2>
+
+                    <!-- Rayitas abajo a la derecha -->
+                    <svg class="absolute -bottom-12 -right-4 h-16 w-auto rotate-180 lg:-bottom-20 lg:right-8 lg:h-24"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.66 200.89" fill="currentColor"
+                        aria-hidden="true" focusable="false">
+                        <path d="M5.54,162.86l-5.54-1.55c5.44-20.91,12.6-39.7,21.81-59.04C39.05,66.04,59.73,32.4,83.15,0l4.51,3.59c-24.14,33.38-45.41,68.15-62.8,105.7-8.13,17.56-14.29,34.33-19.32,53.57Z" />
+                        <path d="M25.26,200.87l-5.79.02c2.83-25.6,11.47-52.31,27.45-72.26l3.72,3.43c.79.73-1.64,2.97-2.27,3.9-13.08,19.35-20.33,40.65-23.11,64.91Z" />
+                    </svg>
+                </div>
+
+                <!-- Texto -->
+                <div class="font-texto text-sm leading-relaxed text-center max-w-md space-y-6 lg:text-left lg:text-base lg:w-1/2"
+                    data-aos="fade-left">
+                    <p>
+                        Desde 1988, Pizca forma parte de Guadalajara. Más de tres décadas compartiendo pizzas, reuniendo a generaciones y formando parte de esos planes que siempre apetece repetir.
+                    </p>
+                    <p>
+                        Somos una pizzería familiar, de esas en las que lo importante no es solo lo que llega a la mesa, sino también con quién lo compartes. Un lugar para gente joven, menos joven y de todas las edades, porque aquí siempre hay sitio para uno más.
+                    </p>
+                    <p>
+                        Con los años hemos crecido sin perder lo que nos hace ser Pizca: nuestra cercanía, nuestras ganas de hacer las cosas a nuestra manera y el cariño por nuestro barrio.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!-- LAS PEQUEÑAS COSAS -->
+        <section id="detalles" class="bg-crema text-granate px-6 py-20 overflow-hidden lg:px-12 lg:py-28">
+
+            <div class="max-w-6xl mx-auto">
+
+                    <!-- Título con rayitas y óvalo alrededor de "Pizca" -->
+                    <div class="relative w-fit mx-auto text-center" data-aos="fade-up">
+
+
+                        <h2 class="font-titulo uppercase leading-[0.85] text-3xl sm:text-5xl md:text-6xl">
+                            <span class="block text-2xl sm:text-4xl md:text-5xl">Las pequeñas cosas,</span>
+                            <span class="block mt-1">
+                                que nos hacen
+                                <!-- "Pizca." con óvalo dibujado a mano -->
+                                <span class="relative inline-block">
+                                    Pizca.
+                                </span>
+                            </span>
+                        </h2>
+                    </div>
+
+                <!-- Tarjetas: 1 columna en móvil, 3 en escritorio -->
+                <ul class="grid grid-cols-1 gap-16 mt-20 text-center md:grid-cols-3 md:gap-x-8 md:mt-24">
+
+                    <!-- TREN -->
+                     <li class="flex flex-col items-center" data-aos="fade-up"></li>
+                        <img src="iconos/tren.svg" alt="" aria-hidden="true" class="h-28 w-auto md:h-24 lg:h-28">
+                        <h3 class="font-texto font-semibold uppercase tracking-wide text-lg md:text-base lg:text-lg mt-8">
+                            Tu pizza en camino
+                        </h3>
+                        <p class="font-texto text-sm leading-relaxed mt-3 max-w-xs md:text-xs lg:text-sm">
+                            Un tren a escala recorre el local para anunciar cuándo está listo tu pedido. Porque en Pizca hasta la forma de servirte tiene su propia historia.
+                        </p>
+                    </li>
+
+                    <!-- CUADRO -->
+                     <li class="flex flex-col items-center" data-aos="fade-up"></li>
+                        <img src="iconos/arte.svg" alt="" aria-hidden="true" class="h-28 w-auto md:h-24 lg:h-28">
+                        <h3 class="font-texto font-semibold uppercase tracking-wide text-lg md:text-base lg:text-lg mt-8">
+                            Paredes que dan para mucho
+                        </h3>
+                        <p class="font-texto text-sm leading-relaxed mt-3 max-w-xs md:text-xs lg:text-sm">
+                            Reservamos un espacio gratuito para que artistas y creadores puedan mostrar sus obras, compartir su talento y acercar el arte a quienes nos visitan.
+                        </p>
+                    </li>
+
+                    <!-- CANICAS -->
+                    <li class="flex flex-col items-center" data-aos="fade-up">
+                        <img src="iconos/canica.svg" alt="" aria-hidden="true" class="h-28 w-auto md:h-24 lg:h-28">
+                        <h3 class="font-texto font-semibold uppercase tracking-wide text-lg md:text-base lg:text-lg mt-8">
+                            La diversión en los detalles
+                        </h3>
+                        <p class="font-texto text-sm leading-relaxed mt-3 max-w-xs md:text-xs lg:text-sm">
+                            Un circuito de canicas recorre una de nuestras paredes y convierte cualquier espera en un momento de curiosidad y diversión para pequeños y mayores.
+                        </p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
