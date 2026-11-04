@@ -20,6 +20,7 @@
 
     <!-- 4. Sistema de diseño -->
     <style type="text/tailwindcss">
+        
         @theme static {
             --color-granate: #681211;
             --color-crema: #FAFAF1;
@@ -43,45 +44,54 @@
 <body>
 
     <main>
+            <!-- PORTADA -->
+            <section class="bg-granate text-crema min-h-screen flex items-center overflow-hidden">
 
-        <!-- PORTADA -->
-        <section class="bg-granate text-crema min-h-screen flex items-center overflow-hidden">
-
+            
             <div class="w-full px-6 flex flex-col items-center text-center md:items-start md:text-left md:px-12 lg:pl-36 lg:pr-12">
-                <h1 class="font-titulo uppercase leading-none text-portada-sm sm:text-9xl md:text-portada-md xl:text-portada-xl">
-                    Disfruta <span class="hidden lg:inline">de</span>
-                </h1>
+
+                <div class="relative w-fit">
+                    <h1 class="font-titulo uppercase leading-none text-portada-sm sm:text-9xl md:text-portada-md xl:text-portada-xl">
+                        Disfruta <span class="hidden lg:inline">de</span>
+                    </h1>
+
+                    <svg class="absolute right-0 top-0 translate-x-8 -translate-y-8 w-8 sm:w-10 md:top-auto md:bottom-0 md:translate-x-30 md:-translate-y-8 md:w-28 lg:translate-x-46 lg:-translate-y-10 lg:w-40 l:translate-x-56 xl:-translate-y-12 xl:w-52 xl:translate-x-60 h-auto text-crema pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.97 71.54"
+                        fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M42.44,50.62l-.21,20.92-10.72-17.49-14.26,17.44,2.67-23.04L1.82,54.19l13.97-16.68L0,28.19l19.52-3.19c-.85-8.47-1.64-15.58-2.05-24.99,5.52,6.86,9.12,12.61,13.79,19.49L42.75,2.67c-.03,7.18-.31,11.34-.86,18.45l19.18-5.3-13.21,14.46,18.11,4.34-16.82,5.86,14.63,16.99-21.34-6.85Z" />
+                    </svg>
+                </div>
 
                 <h2 class="font-titulo uppercase leading-ajustado text-5xl sm:text-sub-m md:text-sub-l lg:text-sub-m xl:text-sub-xl">
                     <span class="lg:hidden">de</span> nuestros sabores más tradicionales
                 </h2>
 
                 <p class="font-texto text-base md:text-lg leading-relaxed mt-6 max-w-xl lg:max-w-3xl">
-                    Desde 1988 compartimos nuestra pasión por las pizzas, elaborando combinaciones que forman parte de nuestra historia.Apostamos por los sabores de siempre, esos que nunca pasan de moda y que nos gusta seguir compartiendo con vosotros, generación tras generación.
+                    Desde 1988 compartimos nuestra pasión por las pizzas, elaborando combinaciones que forman parte de nuestra historia. Apostamos por los sabores de siempre, esos que nunca pasan de moda y que nos gusta seguir compartiendo con vosotros, generación tras generación.
                 </p>
 
-                
                 <a href="#carta" class="ver-carta font-texto">Ver carta
-                        <!-- Subrayado a mano -->
-                    <svg class="ver-carta__linea" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295.35 12.12"
-                    preserveAspectRatio="none" fill="currentColor" aria-hidden="true" focusable="false">
-                    <path d="M292.42,11.55c-29.14-6.68-71.66-8.91-102.59-8.95l-83.07-.11L.04,5.9l-.04-2.52L131.71.08,171.9,0c30.96-.06,61.16.88,91.95,3.96,10.99,1.32,20.86,3.02,31.46,5.76.07.88.06,2.51-.43,2.4l-2.47-.57Z"/>
-                </svg>
+                    <!-- Subrayado a mano -->
+                    <svg class="ver-carta__linea" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602.18 65.61"
+                        preserveAspectRatio="none" fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M11.46,64.67c18.26-5.6,36.64-10.79,55.14-15.55,9.16-2.36,18.34-4.61,27.55-6.77,4.6-1.08,9.22-2.13,13.83-3.15,2.31-.51,4.62-1.02,6.93-1.52,1.07-.23,2.13-.46,3.2-.69.02,0,1.77-.37.75-.16-.88.19,1.1-.23,1.28-.27,37.21-7.79,74.76-13.89,112.52-18.32,36.88-4.32,74.69-7.01,112.78-8.01,37.75-.99,75.26-.32,112.82,2.1,37.93,2.44,75.76,6.58,113.32,12.43,4.67.73,9.34,1.49,14.01,2.27,4.67.78,10.81-1.05,14.54-3.89,3.34-2.56,2.49-5.07-1.54-5.75-38.03-6.36-76.35-10.98-114.8-13.83C445.12.69,406.33-.45,367.57.16c-39.06.61-78.06,3.06-116.91,7.16-38.16,4.03-76.15,9.77-113.79,17.23-38.4,7.6-76.46,16.85-114.01,27.91-4.54,1.34-9.06,2.7-13.59,4.09-2.36.72-10.2,3.05-9.19,6.82s9.3,1.94,11.37,1.31h0Z" />
+                    </svg>
                 </a>
 
             </div>
 
         </section>
 
-        <!-- PIZZA DEL MES -->
-        <section class="relative bg-crema text-granate min-h-screen px-6 py-16 overflow-hidden lg:px-12 lg:flex lg:items-center">
+        </section>
 
+        <!-- PIZZA DEL MES -->
+        <section class="relative bg-crema text-granate min-h-screen lg:portrait:min-h-0 px-6 py-16 lg:portrait:py-32 overflow-hidden
+                flex items-center lg:px-12">
             <div class="relative w-full lg:flex lg:justify-center lg:items-center">
 
                 <!-- Texto -->
-                <div class="relative z-10 pointer-events-none md:pointer-events-none text-center lg:text-left lg:w-96 xl:w-128 2xl:w-144 lg:shrink-0">
-
-                    <h2 class="font-titulo uppercase leading-none text-7xl sm:text-8xl md:text-9xl lg:text-8xl xl:text-9xl">
+                <div class="relative z-10 pointer-events-none text-center lg:text-left lg:pl-12 xl:pl-24 2xl:pl-32 lg:w-fit lg:shrink-0">
+                    <h2 class="font-titulo uppercase leading-none whitespace-nowrap text-7xl sm:text-8xl md:text-9xl lg:text-8xl xl:text-9xl">
                         Descubre
                         <br>
                         nuestra
@@ -91,16 +101,31 @@
                         del mes
                     </h2>
 
-                    <p class="font-texto text-base md:text-lg lg:text-xl leading-relaxed mt-10 mx-auto lg:mx-0 max-w-xl lg:max-w-lg">
-                        Este mes recuperamos una de nuestras combinaciones más especiales: la pizza 25 años. Jamón de york, bacon, cebolla (si te gusta) y un toque suave de salsa barbacoa que le da ese punto ahumado y ligeramente dulce que engancha desde el primer bocado.
+                    <p class="font-texto text-base md:text-lg lg:text-xl leading-snug mt-2 mx-auto lg:mx-0 max-w-xl lg:max-w-lg">
+                        Este mes recuperamos una de nuestras combinaciones más especiales: la pizza 25 años.
                     </p>
-
                 </div>
 
                 <!-- Imagen de la pizza -->
-                <div id="pizza-movible" class="absolute left-1/2 ml-14 top-36 w-28 sm:ml-20 sm:top-48 sm:w-36 md:ml-28 md:top-64 md:w-48 lg:static lg:w-152 lg:max-w-none lg:shrink-0 lg:-ml-40 lg:-translate-y-26 xl:w-188 2xl:w-224">
-                    <img src="imagenes/p-25anos.webp" alt="Pizza del mes" class="w-full block">
-                </div>
+                    <div id="pizza-movible" class="absolute left-1/2 ml-14 top-36 w-28 sm:ml-20 sm:top-48 sm:w-36 md:ml-28 md:top-64 md:w-48
+                            lg:relative lg:left-auto lg:top-auto lg:w-140 lg:-ml-56 lg:-mt-12 lg:max-w-none lg:shrink-0
+                             xl:w-180 xl:-ml-44 xl:-mt-14 2xl:w-220 2xl:-ml-56 2xl:-mt-16">
+                        <img src="imagenes/p-25anos.webp" alt="Pizza del mes" class="w-full block">
+                    </div>
+
+                        <svg class="absolute left-1/2 ml-36 top-35 w-5
+                                    sm:ml-48 sm:top-45 sm:w-8
+                                    md:ml-66 md:top-60 md:w-10
+                                    lg:left-auto lg:ml-0 lg:top-12 lg:right-10 lg:w-16
+                                    xl:top-2 xl:right-44 xl:w-20
+                                    2xl:top-4 2xl:right-56 2xl:w-24
+                                    h-auto text-granate pointer-events-none rotate-280"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.67 58.55"
+                            fill="currentColor" aria-hidden="true" focusable="false">
+                            <rect x="39.49" y="-14.92" width="2.62" height="52.89" transform="translate(14.27 44.6) rotate(-67.04)"/>
+                            <rect x="13.78" y="15.97" width="2.54" height="46.52" transform="translate(-20.62 17.02) rotate(-37.11)"/>
+                        </svg>
+                    </div>
 
             </div>
 
@@ -125,19 +150,59 @@
 
             <div class="flex flex-col gap-16 lg:gap-8">
 
-                <!-- MARGARITA -->
-                <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
-                    <div class="w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
-                        <img src="imagenes/p-margarita.webp" alt="Pizza Margarita" class="w-full block">
-                    </div>
-                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
-                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Margarita</h3>
-                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+        <!-- MARGARITA -->
+            <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
+
+                <!-- Pizza (+ rayas y curva) -->
+                <div class="relative w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
+                    <img src="imagenes/p-margarita.webp" alt="Pizza Margarita" class="w-full block">
+
+                    <!-- Rayas: arriba a la derecha -->
+                    <svg class="absolute -top-1 right-2 w-8
+                                sm:-top-2 sm:right-3 sm:w-10
+                                lg:-top-3 lg:right-8 lg:w-12
+                                xl:w-14
+                                h-auto text-crema pointer-events-none rotate-280"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.67 58.55"
+                        fill="currentColor" aria-hidden="true" focusable="false">
+                        <rect x="39.49" y="-14.92" width="2.62" height="52.89" transform="translate(14.27 44.6) rotate(-67.04)"/>
+                        <rect x="13.78" y="15.97" width="2.54" height="46.52" transform="translate(-20.62 17.02) rotate(-37.11)"/>
+                    </svg>
+
+                    <!-- Curva: abajo a la izquierda -->
+                    <svg class="absolute -bottom-1 left-6 w-5
+                                sm:-bottom-2 sm:left-8 sm:w-6
+                                lg:-bottom-3 lg:left-12 lg:w-8
+                                xl:w-9
+                                h-auto text-crema pointer-events-none rotate-[300]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.66 200.89"
+                        fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M5.54,162.86l-5.54-1.55c5.44-20.91,12.6-39.7,21.81-59.04C39.05,66.04,59.73,32.4,83.15,0l4.51,3.59c-24.14,33.38-45.41,68.15-62.8,105.7-8.13,17.56-14.29,34.33-19.32,53.57Z"/>
+                        <path d="M25.26,200.87l-5.79.02c2.83-25.6,11.47-52.31,27.45-72.26l3.72,3.43c.79.73-1.64,2.97-2.27,3.9-13.08,19.35-20.33,40.65-23.11,64.91Z"/>
+                    </svg>
+                </div>
+
+                <!-- Texto (+ estrella) -->
+                <div class="relative flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
+
+                    <!-- Estrella: derecha del título en móvil, izquierda en desktop -->
+                    <svg class="absolute right-4 -top-2 w-7
+                                sm:right-12 sm:w-8
+                                lg:right-auto lg:-left-10 lg:-top-3 lg:w-10
+                                xl:-left-12 xl:w-12
+                                h-auto text-crema pointer-events-none"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.97 71.54"
+                        fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M42.44,50.62l-.21,20.92-10.72-17.49-14.26,17.44,2.67-23.04L1.82,54.19l13.97-16.68L0,28.19l19.52-3.19c-.85-8.47-1.64-15.58-2.05-24.99,5.52,6.86,9.12,12.61,13.79,19.49L42.75,2.67c-.03,7.18-.31,11.34-.86,18.45l19.18-5.3-13.21,14.46,18.11,4.34-16.82,5.86,14.63,16.99-21.34-6.85ZM40.65,48.5l17.86,5.58-11.89-14.4,13.23-4.62-14.83-4.03,10.77-12.08-15.62,4.73.83-16.15-9.44,14.68L19.17,4.7l2.08,21.66-16.41,2.75,13.22,7.85-11.11,13.69,14.64-4.05-1.99,19.49,12.19-14.65,8.99,14.85-.12-17.78Z"/>
+                    </svg>
+
+                    <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Margarita</h3>
+                    <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
                         La pizza de toda la vida, sencilla y deliciosa. La combinación del tomate, la mozzarella fundida y el aroma del orégano crea un sabor equilibrado que demuestra que no hace falta complicarse para disfrutar de una buena pizza.
-                        </p>
-                        <a href="tel:+34900000000" class="btn-cesta font-texto mt-6">Pedir por teléfono</a>
-                    </div>
-                </article>
+                    </p>
+                    <a href="tel:+34900000000" class="btn-cesta font-texto mt-6">Pedir por teléfono</a>
+                </div>
+            </article>
 
                 <!-- D'YORK -->
                 <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
@@ -314,6 +379,7 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 
