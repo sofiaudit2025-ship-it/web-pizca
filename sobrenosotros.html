@@ -48,7 +48,7 @@
         <section class="relative bg-granate text-crema min-h-screen flex items-center justify-center overflow-hidden px-6 py-16">
 
             <!-- 1. Imagen de fondo (capa de abajo) -->
-            <img src="imagenes/elaboracion.webp" alt="" aria-hidden="true"
+            <img src="imagenes/nosotros.webp" alt="" aria-hidden="true"
                 class="absolute inset-0 w-full h-full object-cover">
 
             <!-- 2. Capa granate con opacidad (encima de la imagen) -->
@@ -206,21 +206,40 @@
 
             <div class="max-w-6xl mx-auto">
 
-                    <!-- Título con rayitas y óvalo alrededor de "Pizca" -->
-                    <div class="relative w-fit mx-auto text-center" data-aos="fade-up">
+                <!-- Título con rayitas y óvalo alrededor de "Pizca" -->
+                <div class="relative w-fit mx-auto text-center" data-aos="fade-up">
 
+                    <h2 class="font-titulo uppercase leading-ajustado">
 
-                        <h2 class="font-titulo uppercase leading-ajustado text-5xl sm:text-6xl md:text-7xl">
-                            <span class="block text-4xl sm:text-5xl md:text-6xl">Las pequeñas cosas,</span>
-                            <span class="block mt-1">
-                                que nos hacen
-                                <!-- "Pizca." con óvalo dibujado a mano -->
-                                <span class="relative inline-block">
-                                    Pizca.
+                        <!-- Primera línea con rayitas -->
+                        <span class="block">
+                            <span class="relative inline-block text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
+                                <svg class="absolute -top-3 -left-6 w-6 sm:-top-5 sm:-left-8 sm:w-8 md:-top-6 md:-left-10 md:w-10 text-granate rotate-180"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.67 58.55" fill="currentColor"
+                                    aria-hidden="true" focusable="false">
+                                    <rect x="39.49" y="-14.92" width="2.62" height="52.89" transform="translate(14.27 44.6) rotate(-67.04)" />
+                                    <rect x="13.78" y="15.97" width="2.54" height="46.52" transform="translate(-20.62 17.02) rotate(-37.11)" />
+                                </svg>
+                                Las pequeñas cosas,
+                            </span>
+                        </span>
+
+                        <!-- Segunda línea con óvalo -->
+                        <span class="block mt-1 text-4xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap">
+                            que nos hacen
+                            <span class="relative inline-block">
+                                Pizca.
+                                <span class="absolute -inset-x-3 -inset-y-2 sm:-inset-x-5 sm:-inset-y-3 pointer-events-none" aria-hidden="true">
+                                    <svg class="w-full h-full text-granate" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 1636 522.29" preserveAspectRatio="none" fill="currentColor" focusable="false">
+                                        <path d="M1553.85,206.99c-36.2-21.01-85-40.49-145.06-57.9C1062.03,48.56,654.53,32.9,290.79,106.11c-3.25.65-5.35,3.82-4.7,7.07.65,3.25,3.82,5.36,7.07,4.7,361.91-72.84,767.32-57.26,1112.29,42.74,59.12,17.14,107.03,36.23,142.38,56.75,43.97,25.53,69.2,53.56,74.97,83.33,4.55,23.45-3.93,48.39-24.51,72.13-19.42,22.39-49.44,43.23-84.55,58.68-70.24,30.9-156.98,44.04-240.25,53.63-162.18,18.68-328.57,27.03-494.56,24.8-165.99-2.23-331.66-15.03-492.4-38.05-65.04-9.31-138.99-21.75-193.56-51.7-24.16-13.25-43.36-29.57-57.07-48.51-12.81-17.7-20.57-37.27-23.04-58.18-5.5-46.47,15.57-95.12,57.81-133.49,69.99-63.58,191.57-110.47,361.34-139.38C605.41,11.11,793.63,4.26,976.31,20.82c182.65,16.56,360,56.54,512.86,115.62,3.09,1.19,6.56-.34,7.76-3.43,1.19-3.09-.34-6.57-3.43-7.76-77.55-29.97-161.18-55.12-248.56-74.73-86.22-19.36-176.23-33.37-267.54-41.64C793.69-7.79,604.4-.89,430,28.8,257.93,58.1,134.32,105.99,62.6,171.13,17.45,212.14-5.02,264.54.94,314.91c5.59,47.23,36.22,88.35,86.25,115.8,56.34,30.91,131.56,43.59,197.64,53.05,161.25,23.09,327.44,35.93,493.94,38.17,17.57.24,35.12.35,52.69.35,148.96,0,297.88-8.47,443.4-25.23,84.21-9.7,172.01-23.03,243.71-54.57,37.23-16.38,67.93-37.75,88.78-61.8,23.08-26.62,32.5-55.07,27.22-82.27-6.46-33.32-33.62-64.08-80.73-91.42Z" />
+                                    </svg>
                                 </span>
                             </span>
-                        </h2>
-                    </div>
+                        </span>
+
+                    </h2>
+                </div>
 
                 <ul class="grid grid-cols-1 gap-16 mt-20 text-center md:grid-cols-3 md:gap-x-8 md:mt-24">
 
@@ -283,13 +302,30 @@
 <!-- RESEÑAS -->
 <section id="resenas" class="bg-granate text-crema px-6 py-16 overflow-hidden lg:px-12 lg:py-24">
 
-    <div class="max-w-6xl mx-auto">
+ <div class="relative w-fit mx-auto" data-aos="fade-up">
 
-        <h2 class="font-titulo uppercase leading-ajustado text-center text-6xl sm:text-7xl lg:text-8xl"
-            data-aos="fade-up">
-            No lo decimos nosotros,<br>lo hacéis vosotros
-        </h2>
+    <!-- Rayitas decorativas (arriba a la derecha) -->
+    <svg class="absolute -top-6 -right-6 w-8 sm:-top-8 sm:-right-10 sm:w-10 lg:-top-10 lg:-right-14 lg:w-14 text-crema rotate-270"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.67 58.55" fill="currentColor"
+        aria-hidden="true" focusable="false">
+        <rect x="39.49" y="-14.92" width="2.62" height="52.89" transform="translate(14.27 44.6) rotate(-67.04)" />
+        <rect x="13.78" y="15.97" width="2.54" height="46.52" transform="translate(-20.62 17.02) rotate(-37.11)" />
+    </svg>
 
+    <h2 class="font-titulo uppercase leading-ajustado text-center text-5xl sm:text-7xl lg:text-8xl">
+        No lo decimos<br>nosotros,<br>lo hacéis<br>
+        <!-- "Vosotros" con subrayado a mano -->
+        <span class="relative inline-block">
+            vosotros
+            <svg class="absolute left-0 -bottom-1 w-full h-2 sm:-bottom-2 sm:h-3 lg:h-4 text-crema"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602.18 65.61" preserveAspectRatio="none"
+                fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M11.46,64.67c18.26-5.6,36.64-10.79,55.14-15.55,9.16-2.36,18.34-4.61,27.55-6.77,4.6-1.08,9.22-2.13,13.83-3.15,2.31-.51,4.62-1.02,6.93-1.52,1.07-.23,2.13-.46,3.2-.69.02,0,1.77-.37.75-.16-.88.19,1.1-.23,1.28-.27,37.21-7.79,74.76-13.89,112.52-18.32,36.88-4.32,74.69-7.01,112.78-8.01,37.75-.99,75.26-.32,112.82,2.1,37.93,2.44,75.76,6.58,113.32,12.43,4.67.73,9.34,1.49,14.01,2.27,4.67.78,10.81-1.05,14.54-3.89,3.34-2.56,2.49-5.07-1.54-5.75-38.03-6.36-76.35-10.98-114.8-13.83C445.12.69,406.33-.45,367.57.16c-39.06.61-78.06,3.06-116.91,7.16-38.16,4.03-76.15,9.77-113.79,17.23-38.4,7.6-76.46,16.85-114.01,27.91-4.54,1.34-9.06,2.7-13.59,4.09-2.36.72-10.2,3.05-9.19,6.82s9.3,1.94,11.37,1.31h0Z" />
+            </svg>
+        </span>
+    </h2>
+
+</div>
         <ul class="grid grid-cols-1 gap-8 mt-14 items-start md:grid-cols-2 md:gap-x-8 md:gap-y-10 lg:grid-cols-3 lg:mt-20">
 
             <!-- Reseña 1 -->
