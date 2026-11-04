@@ -39,3 +39,16 @@ if ($('#resenas').length && $(window).width() >= 768) {
     });
 }
 
+
+
+
+
+$(function () {
+    if ($('#inicio').length && $(window).width() >= 768) {
+        $('#inicio .pizza-portada').draggable({
+            containment: '#inicio',
+            stack: '#inicio .pizza-portada'
+        });
+    }
+});
+
