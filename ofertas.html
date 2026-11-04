@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ofertas para socios · Pizca</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/ofertas.script.js" defer></script>
+
+    <style type="text/tailwindcss">
+        @theme static {
+            --color-granate: #681211;
+            --color-crema: #FAFAF1;
+
+            --font-titulo: "Anton", sans-serif;
+            --font-texto: "Barlow", sans-serif;
+
+            --text-sub-m: 3.5rem;
+            --text-sub-l: 4rem;
+            --text-sub-xl: 5rem;
+
+            --leading-ajustado: 1.05;
+        }
+    </style>
+</head>
+<body class="bg-granate text-crema dark:bg-crema dark:text-granate font-texto">
+
+    <!-- Aquí irá el <header> de la web (cuando lo tengáis en vuestra rama) -->
+
+    <main class="min-h-screen px-6 py-16 lg:px-12">
+        <div class="mx-auto w-full max-w-5xl">
+
+            <!-- PASO 1: saludo -->
+            <section aria-labelledby="titulo-ofertas" class="text-center lg:text-left">
+                <h1 id="titulo-ofertas" class="font-titulo uppercase text-sub-m sm:text-sub-l xl:text-sub-xl leading-ajustado">
+                    Hola,
+                    <span class="relative inline-block">
+                        Saúl
+                        <svg class="absolute -right-10 -top-5 w-6
+                                    sm:-right-12 sm:-top-6 sm:w-8
+                                    lg:-right-12 lg:-top-4 lg:w-12
+                                    h-auto pointer-events-none"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.97 71.54"
+                            fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M42.44,50.62l-.21,20.92-10.72-17.49-14.26,17.44,2.67-23.04L1.82,54.19l13.97-16.68L0,28.19l19.52-3.19c-.85-8.47-1.64-15.58-2.05-24.99,5.52,6.86,9.12,12.61,13.79,19.49L42.75,2.67c-.03,7.18-.31,11.34-.86,18.45l19.18-5.3-13.21,14.46,18.11,4.34-16.82,5.86,14.63,16.99-21.34-6.85ZM40.65,48.5l17.86,5.58-11.89-14.4,13.23-4.62-14.83-4.03,10.77-12.08-15.62,4.73.83-16.15-9.44,14.68L19.17,4.7l2.08,21.66-16.41,2.75,13.22,7.85-11.11,13.69,14.64-4.05-1.99,19.49,12.19-14.65,8.99,14.85-.12-17.78Z"/>
+                        </svg>
+                    </span>
+                </h1>
+                <p class="mt-4 text-base lg:text-lg">
+                    Socio de Pizca nº 0001. Enseña el código al pedir por teléfono o en el mostrador.
+                </p>
+            </section>
+
+            <!-- PASO 2: ofertas -->
+            <section aria-labelledby="titulo-lista" class="mt-12">
+                <h2 id="titulo-lista" class="sr-only">Tus ofertas</h2>
+
+                <ul class="border-t border-current">
+                    <li class="border-b border-current py-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-10">
+                        <p class="font-titulo uppercase text-sub-l leading-ajustado lg:w-56 lg:shrink-0">-10 %</p>
+                        <div class="lg:flex-1">
+                            <h3 class="font-titulo uppercase text-3xl leading-ajustado">En toda la carta</h3>
+                            <p class="mt-1 leading-snug">Aplicable a todas las pizzas, cada vez que pidas.</p>
+                        </div>
+                        <button type="button" data-copiar="SOCIO10"
+                                class="self-start border border-current rounded-full px-6 py-2 text-sm uppercase tracking-wide transition-colors
+                                       hover:bg-crema hover:text-granate dark:hover:bg-granate dark:hover:text-crema
+                                       focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current">
+                            Copiar código
+                        </button>
+                    </li>
+
+                    <li class="border-b border-current py-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-10">
+                        <p class="font-titulo uppercase text-sub-l leading-ajustado lg:w-56 lg:shrink-0">-2 €</p>
+                        <div class="lg:flex-1">
+                            <h3 class="font-titulo uppercase text-3xl leading-ajustado">Pizza del mes</h3>
+                            <p class="mt-1 leading-snug">La pizza 25 años, con descuento para socios.</p>
+                        </div>
+                        <button type="button" data-copiar="MES25"
+                                class="self-start border border-current rounded-full px-6 py-2 text-sm uppercase tracking-wide transition-colors
+                                       hover:bg-crema hover:text-granate dark:hover:bg-granate dark:hover:text-crema
+                                       focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current">
+                            Copiar código
+                        </button>
+                    </li>
+
+                    <li class="border-b border-current py-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-10">
+                        <p class="font-titulo uppercase text-sub-l leading-ajustado lg:w-56 lg:shrink-0">2x1</p>
+                        <div class="lg:flex-1">
+                            <h3 class="font-titulo uppercase text-3xl leading-ajustado">Martes de pizzas medianas</h3>
+                            <p class="mt-1 leading-snug">Pide una y llévate otra igual, los martes.</p>
+                        </div>
+                        <button type="button" data-copiar="MARTES2X1"
+                                class="self-start border border-current rounded-full px-6 py-2 text-sm uppercase tracking-wide transition-colors
+                                       hover:bg-crema hover:text-granate dark:hover:bg-granate dark:hover:text-crema
+                                       focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current">
+                            Copiar código
+                        </button>
+                    </li>
+
+                    <li class="border-b border-current py-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-10">
+                        <p class="font-titulo uppercase text-sub-l leading-ajustado lg:w-56 lg:shrink-0">Gratis</p>
+                        <div class="lg:flex-1">
+                            <h3 class="font-titulo uppercase text-3xl leading-ajustado">Pizza de cumpleaños</h3>
+                            <p class="mt-1 leading-snug">Una pizza mediana la semana de tu cumpleaños.</p>
+                        </div>
+                        <button type="button" data-copiar="CUMPLE"
+                                class="self-start border border-current rounded-full px-6 py-2 text-sm uppercase tracking-wide transition-colors
+                                       hover:bg-crema hover:text-granate dark:hover:bg-granate dark:hover:text-crema
+                                       focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current">
+                            Copiar código
+                        </button>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Aquí irá el <footer> de la web -->
+</body>
+</html>
