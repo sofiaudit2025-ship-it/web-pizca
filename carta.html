@@ -197,19 +197,29 @@
                 </div>
             </article>
 
-                <!-- D'YORK -->
-                <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
-                    <div class="relative w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
-                        <img src="imagenes/p-york.webp" alt="Pizza D'York" class="w-full block">
-                    </div>
-                    <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
-                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">D'York</h3>
-                        <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
-                        Una apuesta segura para quienes disfrutan de los sabores clásicos. El jamón de york se combina con el tomate, la mozzarella fundida y el orégano para dar lugar a una pizza suave, sabrosa y perfecta para compartir en cualquier ocasión.
-                        </p>
-                        <a href="tel:+34900000000" class="btn-cesta font-texto mt-6">Pedir por teléfono</a>
-                    </div>
-                </article>
+            <!-- D'YORK -->
+            <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
+                <div class="relative w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
+                    <img src="imagenes/p-york.webp" alt="Pizza D'York" class="w-full block">
+
+                    <!-- Rectas: abajo a la izquierda (espejadas) -->
+                    <svg class="absolute bottom-[3%] left-[2%] w-8 sm:w-9 lg:w-10 xl:w-11
+                                h-auto text-crema pointer-events-none -scale-x-100"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 36"
+                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        aria-hidden="true" focusable="false">
+                        <line x1="10" y1="1" x2="39" y2="14"/>
+                        <line x1="1" y1="14" x2="16" y2="35"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
+                    <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">D'York</h3>
+                    <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
+                    Una apuesta segura para quienes disfrutan de los sabores clásicos. El jamón de york se combina con el tomate, la mozzarella fundida y el orégano para dar lugar a una pizza suave, sabrosa y perfecta para compartir en cualquier ocasión.
+                    </p>
+                    <a href="tel:+34900000000" class="btn-cesta font-texto mt-6">Pedir por teléfono</a>
+                </div>
+            </article>
 
                 <!-- CUATRO QUESOS -->
                 <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
@@ -295,11 +305,27 @@
 
                 <!-- SERRANA -->
                 <article class="flex flex-col items-center gap-6 lg:flex-row-reverse lg:justify-center lg:gap-12">
-                    <div class="w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
+                    <div class="relative w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
                         <img src="imagenes/p-serrana.webp" alt="Pizza Serrana" class="w-full block">
+
+                        <!-- Curva: abajo a la derecha (espejada) -->
+                        <svg class="absolute -bottom-1 right-6 w-5
+                                    sm:-bottom-2 sm:right-8 sm:w-6
+                                    lg:-bottom-3 lg:right-12 lg:w-8
+                                    xl:w-9
+                                    h-auto text-crema pointer-events-none rotate-80 -scale-x-100"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.66 200.89"
+                            fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M5.54,162.86l-5.54-1.55c5.44-20.91,12.6-39.7,21.81-59.04C39.05,66.04,59.73,32.4,83.15,0l4.51,3.59c-24.14,33.38-45.41,68.15-62.8,105.7-8.13,17.56-14.29,34.33-19.32,53.57Z"/>
+                            <path d="M25.26,200.87l-5.79.02c2.83-25.6,11.47-52.31,27.45-72.26l3.72,3.43c.79.73-1.64,2.97-2.27,3.9-13.08,19.35-20.33,40.65-23.11,64.91Z"/>
+                        </svg>
                     </div>
                     <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
-                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Serrana</h3>
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">
+                            <span class="relative inline-block">
+                                Serrana
+                            </span>
+                        </h3>
                         <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
                         El bacon y el champiñón se encuentran en una combinación que destaca por el contraste entre el sabor intenso de la carne y los matices suaves del champiñón. Junto con el tomate, la mozzarella y el orégano, forman una pizza equilibrada, sabrosa y perfecta para disfrutar hasta el último trozo.
                         </p>
@@ -411,7 +437,19 @@
                         <img src="imagenes/p-vegetal.webp" alt="Pizza Vegetal" class="w-full block">
                     </div>
                     <div class="flex flex-col items-center text-center w-full max-w-md lg:items-end lg:text-right lg:w-96 xl:w-112">
-                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Vegetal</h3>
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">
+                            <span class="relative inline-block">
+                                Vegetal
+                                <svg class="absolute -right-8 -top-3 w-8
+                                            lg:right-auto lg:-left-16 lg:-top-2 lg:w-14
+                                            xl:-left-20 xl:w-16
+                                            h-auto text-crema pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.97 71.54"
+                                    fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M42.44,50.62l-.21,20.92-10.72-17.49-14.26,17.44,2.67-23.04L1.82,54.19l13.97-16.68L0,28.19l19.52-3.19c-.85-8.47-1.64-15.58-2.05-24.99,5.52,6.86,9.12,12.61,13.79,19.49L42.75,2.67c-.03,7.18-.31,11.34-.86,18.45l19.18-5.3-13.21,14.46,18.11,4.34-16.82,5.86,14.63,16.99-21.34-6.85ZM40.65,48.5l17.86,5.58-11.89-14.4,13.23-4.62-14.83-4.03,10.77-12.08-15.62,4.73.83-16.15-9.44,14.68L19.17,4.7l2.08,21.66-16.41,2.75,13.22,7.85-11.11,13.69,14.64-4.05-1.99,19.49,12.19-14.65,8.99,14.85-.12-17.78Z"/>
+                                </svg>
+                            </span>
+                        </h3>
                         <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
                         Una opción llena de color y sabor, elaborada con champiñón, pimiento rojo, cebolla y aceitunas. Cada ingrediente aporta sus propios matices y se combina con el tomate, la mozzarella y el orégano para crear una pizza variada y sabrosa, perfecta para quienes disfrutan de las verduras sobre una buena base de pizza.
                         </p>
@@ -421,11 +459,35 @@
 
                 <!-- TROPICAL -->
                 <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
-                    <div class="w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
+                    <div class="relative w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
                         <img src="imagenes/p-tropical.webp" alt="Pizza Tropical" class="w-full block">
+
+                        <!-- Curva: abajo a la izquierda -->
+                        <svg class="absolute -bottom-1 left-6 w-5
+                                    sm:-bottom-2 sm:left-8 sm:w-6
+                                    lg:-bottom-3 lg:left-12 lg:w-8
+                                    xl:w-9
+                                    h-auto text-crema pointer-events-none rotate-280"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.66 200.89"
+                            fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M5.54,162.86l-5.54-1.55c5.44-20.91,12.6-39.7,21.81-59.04C39.05,66.04,59.73,32.4,83.15,0l4.51,3.59c-24.14,33.38-45.41,68.15-62.8,105.7-8.13,17.56-14.29,34.33-19.32,53.57Z"/>
+                            <path d="M25.26,200.87l-5.79.02c2.83-25.6,11.47-52.31,27.45-72.26l3.72,3.43c.79.73-1.64,2.97-2.27,3.9-13.08,19.35-20.33,40.65-23.11,64.91Z"/>
+                        </svg>
                     </div>
                     <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
-                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">Tropical</h3>
+                        <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">
+                            <span class="relative inline-block">
+                                Tropical
+                                <svg class="absolute -right-8 -top-3 w-8
+                                            lg:right-auto lg:-left-16 lg:-top-2 lg:w-14
+                                            xl:-left-20 xl:w-16
+                                            h-auto text-crema pointer-events-none"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.97 71.54"
+                                    fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M42.44,50.62l-.21,20.92-10.72-17.49-14.26,17.44,2.67-23.04L1.82,54.19l13.97-16.68L0,28.19l19.52-3.19c-.85-8.47-1.64-15.58-2.05-24.99,5.52,6.86,9.12,12.61,13.79,19.49L42.75,2.67c-.03,7.18-.31,11.34-.86,18.45l19.18-5.3-13.21,14.46,18.11,4.34-16.82,5.86,14.63,16.99-21.34-6.85ZM40.65,48.5l17.86,5.58-11.89-14.4,13.23-4.62-14.83-4.03,10.77-12.08-15.62,4.73.83-16.15-9.44,14.68L19.17,4.7l2.08,21.66-16.41,2.75,13.22,7.85-11.11,13.69,14.64-4.05-1.99,19.49,12.19-14.65,8.99,14.85-.12-17.78Z"/>
+                                </svg>
+                            </span>
+                        </h3>
                         <p class="font-texto text-sm lg:text-base leading-relaxed text-justify mt-4">
                         Para quienes disfrutan de los contrastes, esta pizza combina la dulzura de la piña con el sabor del jamón serrano o de york. El resultado es una mezcla de matices dulces y salados que aporta un toque diferente a nuestra base tradicional y convierte cada porción en una combinación llena de personalidad.
                         </p>
@@ -472,8 +534,28 @@
                 </article>
                 <!-- 30 AÑOS -->
                 <article class="flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:gap-12">
-                    <div class="w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
+                    <div class="relative w-72 sm:w-96 lg:w-112 lg:shrink-0 xl:w-128">
                         <img src="imagenes/p-30anos.webp" alt="Pizza 30 años" class="w-full block">
+
+                        <!-- Curvas: arriba a la izquierda -->
+                        <svg class="absolute top-[28%] right-[98%] w-5 sm:w-6 lg:w-7 xl:w-8
+                                    h-auto text-crema pointer-events-none"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 51"
+                            fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            aria-hidden="true" focusable="false">
+                            <path d="M22 1 C12 12, 5 26, 1 41"/>
+                            <path d="M12 33 Q8 41 6 50"/>
+                        </svg>
+
+                        <!-- Rectas: abajo a la derecha -->
+                        <svg class="absolute bottom-[3%] right-[2%] w-8 sm:w-9 lg:w-10 xl:w-11
+                                    h-auto text-crema pointer-events-none"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 36"
+                            fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            aria-hidden="true" focusable="false">
+                            <line x1="10" y1="1" x2="39" y2="14"/>
+                            <line x1="1" y1="14" x2="16" y2="35"/>
+                        </svg>
                     </div>
                     <div class="flex flex-col items-center text-center w-full max-w-md lg:items-start lg:text-left lg:w-96 xl:w-112">
                         <h3 class="font-titulo text-5xl lg:text-6xl w-full border-b border-crema pb-2">30 años</h3>
