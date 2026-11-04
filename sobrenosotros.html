@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra historia</title>
+
+    <!-- 1. Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- 2. CSS propio -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 3. Tailwind desde el CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Librería JS extra: AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- 4. Sistema de diseño (el mismo que en la primera página) -->
+    <style type="text/tailwindcss">
+        @theme static {
+            --color-granate: #681211;
+            --color-crema: #FAFAF1;
+
+            --font-titulo: "Anton", sans-serif;
+            --font-texto: "Barlow", sans-serif;
+
+            --text-hist-sm: 4.5rem;
+            --text-hist-md: 7rem;
+            --text-hist-xl: 9rem;
+
+            --text-cifra-sm: 2rem;
+            --text-cifra-xl: 3.5rem;
+
+            --leading-ajustado: 1.05;
+            --leading-compacto: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <!-- PORTADA DE LA HISTORIA -->
+        <section class="relative bg-granate text-crema min-h-screen flex items-center justify-center overflow-hidden px-6 py-16">
+
+            <!-- 1. Imagen de fondo (capa de abajo) -->
+            <img src="imagenes/nosotros.webp" alt="" aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover">
+
+            <!-- 2. Capa granate con opacidad (encima de la imagen) -->
+            <div class="absolute inset-0 bg-granate/75" aria-hidden="true"></div>
+
+            <!-- 3. Contenido (encima de todo) -->
+            <div class="relative z-10 flex flex-col items-center text-center max-w-4xl leading-[0.9]">
+                <h1 class="font-titulo uppercase leading-ajustado text-hist-sm sm:text-hist-md xl:text-hist-xl">
+                    Una Pizca de historia,
+                </h1>
+
+                <h2 class="font-titulo uppercase leading-ajustado text-5xl sm:text-6xl md:text-7xl xl:text-8xl mt-2">
+                    mucho que contar.
+                </h2>
+
+                <p class="font-texto text-base md:text-lg leading-relaxed mt-6 max-w-md md:max-w-xl">
+                    Desde 1988, haciendo pizzas a nuestra manera y convirtiendo cada visita en algo más que una cena
+                </p>
+
+                <!-- Flecha hacia las cifras -->
+                <a href="#cifras" class="flecha-carta mt-8 w-10 h-10 flex items-center justify-center"
+                    aria-label="Ir a nuestras cifras">
+                    <svg class="flecha-carta__icono w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M5 6l7 7 7-7" />
+                        <path d="M5 12l7 7 7-7" />
+                    </svg>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- CIFRAS -->
+        <section id="cifras" class="bg-crema text-granate  px-6 py-16 overflow-hidden lg:px-12 lg:py-24">
+
+            <div class="max-w-6xl mx-auto">
+
+                        
+        <div class="relative w-fit mx-auto text-center" data-aos="fade-up">
+                <h2 class="font-titulo uppercase leading-ajustado  text-6xl sm:text-7xl md:text-8xl">
+                    Una pizca
+                    <span class="block leading-[1] text-3xl sm:text-5xl md:text-6xl">de nuestras cifras</span>
+                </h2>
+
+                    <svg class="absolute -top-3 -right-8 h-10 w-auto sm:-top-4 sm:-right-12 sm:h-14 md:-top-6 md:-right-24 md:h-24 lg:-right-28 lg:h-28"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.97 71.54" fill="currentColor"
+                        aria-hidden="true" focusable="false">
+                        <path d="M42.44,50.62l-.21,20.92-10.72-17.49-14.26,17.44,2.67-23.04L1.82,54.19l13.97-16.68L0,28.19l19.52-3.19c-.85-8.47-1.64-15.58-2.05-24.99,5.52,6.86,9.12,12.61,13.79,19.49L42.75,2.67c-.03,7.18-.31,11.34-.86,18.45l19.18-5.3-13.21,14.46,18.11,4.34-16.82,5.86,14.63,16.99-21.34-6.85ZM40.65,48.5l17.86,5.58-11.89-14.4,13.23-4.62-14.83-4.03,10.77-12.08-15.62,4.73.83-16.15-9.44,14.68L19.17,4.7l2.08,21.66-16.41,2.75,13.22,7.85-11.11,13.69,14.64-4.05-1.99,19.49,12.19-14.65,8.99,14.85-.12-17.78Z" />
+                    </svg>
+        </div>
+
+                <!-- Cifras: 1 columna en móvil, 3 columnas en escritorio -->
+                <ul class="grid grid-cols-1 gap-y-12 mt-14 text-center md:grid-cols-3 md:gap-x-4 md:gap-y-14 md:mt-20">
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            + 30 años
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">de experiencia pizzera</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            + 1000 expos
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Realizadas en nuestro local</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            + 20 sabores
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Sabores para encontrar tu favorita</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            100% barrio
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Una pizzería con mucha personalidad</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            1 tren
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Con destino a tus pedidos</p>
+                    </li>
+
+                    <li class="cifra" data-aos="fade-up">
+                        <p class="font-texto font-semibold uppercase leading-none tracking-wide text-4xl md:text-3xl lg:text-4xl xl:text-5xl">
+                            +365 días
+                        </p>
+                        <p class="font-texto text-sm md:text-xs lg:text-sm mt-3">Con ganas de pizza</p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>   
+        
+        <!-- UNA HISTORIA QUE SE SIGUE AMASANDO -->
+        <section id="historia" class="relative bg-granate text-crema px-6 py-20 overflow-hidden lg:px-12 lg:py-28">
+
+            <div class="max-w-6xl mx-auto flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-16">
+
+                <!-- Título con rayitas decorativas -->
+                <div class="relative text-center lg:text-left lg:w-1/2" data-aos="fade-right">
+
+                    <!-- Rayitas arriba a la izquierda -->
+                    <svg class="absolute -top-8 -left-2 w-8 h-8 lg:-top-10 lg:-left-8 lg:w-10 lg:h-10"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false">
+                        <path d="M4 4 L20 22" />
+                        <path d="M16 2 L28 14" />
+                    </svg>
+
+                    <h2 class="font-titulo uppercase leading-ajustado text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
+                        <span class="block">Una historia</span>
+                        <span class="block">que se sigue</span>
+                        <span class="block">amasando</span>
+                    </h2>
+
+                    <!-- Rayitas abajo a la derecha -->
+                    <svg class="absolute -bottom-12 -right-4 h-16 w-auto rotate-180 lg:-bottom-20 lg:right-8 lg:h-24"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.66 200.89" fill="currentColor"
+                        aria-hidden="true" focusable="false">
+                        <path d="M5.54,162.86l-5.54-1.55c5.44-20.91,12.6-39.7,21.81-59.04C39.05,66.04,59.73,32.4,83.15,0l4.51,3.59c-24.14,33.38-45.41,68.15-62.8,105.7-8.13,17.56-14.29,34.33-19.32,53.57Z" />
+                        <path d="M25.26,200.87l-5.79.02c2.83-25.6,11.47-52.31,27.45-72.26l3.72,3.43c.79.73-1.64,2.97-2.27,3.9-13.08,19.35-20.33,40.65-23.11,64.91Z" />
+                    </svg>
+                </div>
+
+                <!-- Texto -->
+                <div class="font-texto text-sm leading-relaxed text-center max-w-md space-y-6 lg:text-left lg:text-base lg:w-1/2"
+                    data-aos="fade-left">
+                    <p>
+                        Desde 1988, Pizca forma parte de Guadalajara. Más de tres décadas compartiendo pizzas, reuniendo a generaciones y formando parte de esos planes que siempre apetece repetir.
+                    </p>
+                    <p>
+                        Somos una pizzería familiar, de esas en las que lo importante no es solo lo que llega a la mesa, sino también con quién lo compartes. Un lugar para gente joven, menos joven y de todas las edades, porque aquí siempre hay sitio para uno más.
+                    </p>
+                    <p>
+                        Con los años hemos crecido sin perder lo que nos hace ser Pizca: nuestra cercanía, nuestras ganas de hacer las cosas a nuestra manera y el cariño por nuestro barrio.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!-- LAS PEQUEÑAS COSAS -->
+        <section id="detalles" class="bg-crema text-granate px-6 py-20 overflow-hidden lg:px-12 lg:py-28">
+
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Título con rayitas y óvalo alrededor de "Pizca" -->
+                <div class="relative w-fit mx-auto text-center" data-aos="fade-up">
+
+                    <h2 class="font-titulo uppercase leading-ajustado">
+
+                        <!-- Primera línea con rayitas -->
+                        <span class="block">
+                            <span class="relative inline-block text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
+                                <svg class="absolute -top-3 -left-6 w-6 sm:-top-5 sm:-left-8 sm:w-8 md:-top-6 md:-left-10 md:w-10 text-granate rotate-180"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.67 58.55" fill="currentColor"
+                                    aria-hidden="true" focusable="false">
+                                    <rect x="39.49" y="-14.92" width="2.62" height="52.89" transform="translate(14.27 44.6) rotate(-67.04)" />
+                                    <rect x="13.78" y="15.97" width="2.54" height="46.52" transform="translate(-20.62 17.02) rotate(-37.11)" />
+                                </svg>
+                                Las pequeñas cosas,
+                            </span>
+                        </span>
+
+                        <!-- Segunda línea con óvalo -->
+                        <span class="block mt-1 text-4xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-nowrap">
+                            que nos hacen
+                            <span class="relative inline-block">
+                                Pizca.
+                                <span class="absolute -inset-x-3 -inset-y-2 sm:-inset-x-5 sm:-inset-y-3 pointer-events-none" aria-hidden="true">
+                                    <svg class="w-full h-full text-granate" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 1636 522.29" preserveAspectRatio="none" fill="currentColor" focusable="false">
+                                        <path d="M1553.85,206.99c-36.2-21.01-85-40.49-145.06-57.9C1062.03,48.56,654.53,32.9,290.79,106.11c-3.25.65-5.35,3.82-4.7,7.07.65,3.25,3.82,5.36,7.07,4.7,361.91-72.84,767.32-57.26,1112.29,42.74,59.12,17.14,107.03,36.23,142.38,56.75,43.97,25.53,69.2,53.56,74.97,83.33,4.55,23.45-3.93,48.39-24.51,72.13-19.42,22.39-49.44,43.23-84.55,58.68-70.24,30.9-156.98,44.04-240.25,53.63-162.18,18.68-328.57,27.03-494.56,24.8-165.99-2.23-331.66-15.03-492.4-38.05-65.04-9.31-138.99-21.75-193.56-51.7-24.16-13.25-43.36-29.57-57.07-48.51-12.81-17.7-20.57-37.27-23.04-58.18-5.5-46.47,15.57-95.12,57.81-133.49,69.99-63.58,191.57-110.47,361.34-139.38C605.41,11.11,793.63,4.26,976.31,20.82c182.65,16.56,360,56.54,512.86,115.62,3.09,1.19,6.56-.34,7.76-3.43,1.19-3.09-.34-6.57-3.43-7.76-77.55-29.97-161.18-55.12-248.56-74.73-86.22-19.36-176.23-33.37-267.54-41.64C793.69-7.79,604.4-.89,430,28.8,257.93,58.1,134.32,105.99,62.6,171.13,17.45,212.14-5.02,264.54.94,314.91c5.59,47.23,36.22,88.35,86.25,115.8,56.34,30.91,131.56,43.59,197.64,53.05,161.25,23.09,327.44,35.93,493.94,38.17,17.57.24,35.12.35,52.69.35,148.96,0,297.88-8.47,443.4-25.23,84.21-9.7,172.01-23.03,243.71-54.57,37.23-16.38,67.93-37.75,88.78-61.8,23.08-26.62,32.5-55.07,27.22-82.27-6.46-33.32-33.62-64.08-80.73-91.42Z" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </span>
+
+                    </h2>
+                </div>
+
+                <ul class="grid grid-cols-1 gap-16 mt-20 text-center md:grid-cols-3 md:gap-x-8 md:mt-24">
+
+                <!-- TREN -->
+                <li class="flex flex-col items-center" data-aos="fade-up">
+                        <svg class="h-28 w-auto text-granate md:h-24 lg:h-28" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 383.27 306.2" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M383.26,273.76v5.85c-1.98,4.12-6.14,6.59-11.29,5.81l-40.86-6.22c-5.99-.91-12.01-2.41-15.19-7.89l-9.42-16.23-12.48.14c-3.22,29.75-28.26,51.2-57.06,50.96-28.56-.24-53.02-21.99-56.04-51.13l-37.32-.05c-2.99,29.24-27.58,51.09-56.4,51.19s-53.68-21.76-56.73-51.08l-18.51-.22C5.18,254.83-.02,248.8,0,242.27l.06-22.57c.02-6.97,5.93-12.03,12.6-12.18l11.91-.26V44.19c-11.44-2.57-18.66-12.73-17.69-23.88S16.46.8,27.99.02L148.91,0c11.9,0,21.14,8.54,22.51,19.6,1.43,11.6-6.08,21.85-17.56,24.64v51.3s32.74,0,32.74,0l.02-15.09c-.03-8.25,6.45-14.73,14.72-14.68l10.52.06c8.04.05,14.27,6.66,14.22,14.59v15.13s27.57-.02,27.57-.02l-.08-41.5c-10.24,2-19.84-3.35-21.21-13.32-.69-5.05-.53-10.42-.08-15.64.67-7.69,7.66-13.97,15.49-13.98l71.87-.06c9.23,0,16.79,6.83,16.73,16.05l-.07,11.79c-.06,10.82-10.48,17.42-21.48,15.16l-.07,41.29,11.69.36c8.19.25,14.63,7.37,14.76,15.42l.12,7.47,9.08.32c8.41.3,15.61,8.33,15.61,16.93v42.07c0,8.6-7.2,16.66-15.6,16.95l-9.16.31.07,12.73c5.59,1.21,10.8,3.7,13.48,8.97l26.95,53.01,1.51,3.89ZM149.92,33.22c6.68,0,10.54-6.27,10.28-11.43s-4.49-10.38-10.54-10.38l-120.38-.02c-6.55,0-11.08,4.98-11.1,11.04-.01,5.1,4.25,10.82,10.42,10.82l121.31-.03ZM320.54,43.03c2.78-.66,4.52-2.74,4.51-5.09l-.02-10.71c0-2.55-2.34-4.86-5.08-4.86h-71.73c-2.66,0-4.9,2.45-4.9,4.93v10.54c0,2.91,2.29,5.19,5.29,5.19h71.94ZM142.53,207.49l-.03-36.86-52.48.18c-3.47-.66-5.27-3.53-4.74-6.83.42-2.62,2.91-4.67,6.16-4.52l51.07-.18V44.63s-106.62,0-106.62,0v114.62s33.68.03,33.68.03c3.24.5,5.23,3.33,5,6.14s-2.55,5.04-5.66,5.16h-33.04s.03,36.95.03,36.95l106.62-.04ZM303.42,54.35h-38.48v41.19h38.48v-41.19ZM214.76,95.53l.02-15.08c-.13-1.71-1.77-3.29-3.46-3.38h-10.2c-1.34.09-3.19,1.79-3.19,3.22l.05,15.26,16.77-.03ZM329.59,267.43l41.5,6.38-26.24-51.59c-1.09-2.14-4.74-3.37-7.33-3.37h-107.62c-3.66-.01-5.97-2.5-6.02-5.55-.06-3.26,2.3-5.79,6-5.79h100.06s0-95.36,0-95.36c0-3.18-1.94-5.34-5.22-5.29h-170.83s-.03,100.64-.03,100.64l49.78.03c3.43.09,5.71,2.66,5.63,5.82-.07,2.73-2.24,5.49-5.83,5.49H11.41s.05,24.8.05,24.8l295.27.02c4.66,0,7.76,2.62,9.75,6.13l8.43,14.87c1.11,1.05,3.16,2.55,4.67,2.78ZM354.77,176.7l-.02-40.02c0-3.7-3.07-6.66-6.65-6.67l-6.83-.02v53.75s7.48-.12,7.48-.12c3.35-.06,6.02-3.28,6.01-6.91ZM117.74,255.05c-2.98,15.25-16.16,25.77-31.21,25.54-14.7-.23-27.37-10.68-30.26-25.55h-14.34c2.91,22.98,22.6,39.91,45.32,39.79,22.61-.12,41.96-17.03,44.85-39.79h-14.35ZM105.77,255.05l-37.79-.04c2.6,8.66,10.57,14.4,19.27,14.23s16.63-5.68,18.52-14.19ZM268.19,255.05c-2.97,15.25-16.15,25.78-31.21,25.54-14.71-.24-27.35-10.68-30.27-25.56h-14.34c2.9,22.98,22.6,39.91,45.32,39.8,22.61-.12,41.97-17.03,44.84-39.79h-14.35ZM256.22,255.05l-37.79-.04c2.61,8.65,10.57,14.4,19.27,14.23s16.64-5.68,18.52-14.19Z" />
+                            <path d="M289.23,143.25l-47.43.04c-3.33,0-5.6-2.98-5.6-5.62,0-3.58,2.66-5.73,6.33-5.73l46.43.04c3.11,0,5.26,2.4,5.55,5.29.22,2.16-1.75,5.97-5.28,5.97Z" />
+                            <path d="M288.95,174.31h-47.16c-3.41,0-5.61-2.84-5.58-5.74s2.34-5.56,5.64-5.56h47.07c3.19,0,5.56,2.82,5.61,5.47.05,2.9-2.24,5.83-5.57,5.83Z" />
+                            <path d="M350.04,252.52c1.58,3.16-.24,6.5-2.91,7.69-2.06.91-5.8.24-7.14-2.41l-10.55-20.9c-1.39-2.76-.3-6.02,1.87-7.43,2.59-1.68,6.61-1.12,8.12,1.89l10.61,21.16Z" />
+                            <path d="M128.77,116.93c0,6.94-4.88,13.48-12.04,13.48l-56.05.02c-7.19,0-12.19-6.46-12.19-13.22l.03-50.21c0-7.16,5.6-12.94,12.88-12.94l54.59.02c7.76,0,12.79,6.41,12.79,13.65v49.19ZM117.41,65.43h-57.57v53.75h57.57v-53.75Z" />
+                        </svg>
+                    <h3 class="font-texto font-semibold uppercase tracking-wide text-lg md:text-base lg:text-lg mt-8">
+                        Tu pizza en camino
+                    </h3>
+                    <p class="font-texto text-sm leading-relaxed mt-3 max-w-xs md:text-xs lg:text-sm">
+                        Un tren a escala recorre el local para anunciar cuándo está listo tu pedido. Porque en Pizca hasta la forma de servirte tiene su propia historia.
+                    </p>
+                </li>
+
+                <!-- CUADRO -->
+                <li class="flex flex-col items-center" data-aos="fade-up">
+                        <svg class="h-28 w-auto text-granate md:h-24 lg:h-28" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 260.52 383.25" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M137.74,0c5.91,2.34,11.37,7.35,11.5,14.4l.21,11.56,100.49.02c6.29,0,10.58,4.72,10.58,10.66v17.28c-.02,3.49-2.51,5.89-5.63,5.9s-5.65-2.41-5.6-5.89l-.04-16.72h-69.83s.02,60.73.02,60.73l19.36-.05-.02-10.89c0-3.42,2.01-6.02,5.27-6.23,2.42-.16,5.92,1.59,5.92,4.73v12.44c-.02,7.44-6.9,11.63-13.82,11.23-34.21-1.99-79.62,5.52-95.12,39.07,19.65,17.29,44.91,26.17,71.14,26.19,3.94,0,7.24,1.7,7.25,6.09v48.09s25.54,0,25.54,0v-17.57c-.14-5.2,3.89-9.45,9.12-9.48l11.96-.06-.06-15.85c-.02-5.79,4.11-9.72,9.8-9.7l13.5.03v-95.07c-.01-3.67,2.38-6.16,5.61-6.13s5.62,2.33,5.62,6.22v234.02c.17,5.94-4.06,10.95-9.94,10.96l-42.82.09,8.34,50.53c.57,3.43-1.75,6.14-4.72,6.59-2.81.42-5.51-1.35-6.33-4.4l-8.69-52.71-20.04-.03,8.34,50.56c.5,3.42-1.68,6.11-4.75,6.58-2.55.39-5.77-1.3-6.29-4.43l-8.72-52.73H61.43s-8.77,52.99-8.77,52.99c-.55,3.34-4.23,4.8-7.09,4.01-2.24-.62-4.41-3.3-3.93-6.2l8.37-50.8-38.73.02c-6.41,0-11.45-4.16-11.27-11.06L.03,35.31c0-4.84,5.17-9.3,9.71-9.31l97.45-.06.17-11.66c.1-7.08,5.68-12.05,11.84-14.28h18.53ZM138.13,25.93v-10.44c-.05-1.84-2.02-4.25-4.01-4.25h-11.44c-2.33,0-4.28,2.23-4.26,4.51l.08,10.22,19.62-.05ZM168.18,185.64c-16.95-.58-32.36-4.19-47.14-10.94-10.87-5.07-20.42-11.36-29.11-19.58l-29.05-.02c-6.81,0-11.5-5.54-11.49-12.08l.03-18.04c0-3.7,2.14-6.23,5.84-6.18,2.63.04,5.27,2.21,5.39,5.49v19.61s27.93-.03,27.93-.03c6.56-14.42,17.65-24.93,31.47-32.38,14.37-7.7,29.95-11.52,46.14-13.28v-61.04s-147.89.06-147.89.06l38.53,35.65c2.22,2.05,3.45,5.03,3.85,7.95l-.04,16.42c0,3.42-2.47,5.81-5.42,5.86-3.13.05-5.83-2.33-5.76-5.76l-.11-16.09L11.25,44.46l-.02,133.3c20.28-7.57,38.62-9.33,56.3,4.09l54.58,46.74h46.11s-.03-42.96-.03-42.96ZM73.59,228.7l30.96-.28-44.62-38.3c-14.79-10.96-32.5-6.91-48.73-.36l.06,27.4c6.6.72,13.51-1.19,19.83.46l42.5,11.08ZM206.68,239.85h-81.03s0,74.93,0,74.93h123.62s0-127.54,0-127.54l-12.06-.06.05,15.69c.02,5.69-3.91,9.93-9.69,9.91l-11.39-.05-.03,17.1c.23,5.48-3.49,10.04-9.48,10.03ZM55.89,235.74l-26.9-7.32-17.76.06v12.56s34.91,0,34.91,0l9.75-5.29ZM52.12,276.61c5.88-.01,11.61-2.38,15.75-5.88l35.99-30.35c-10.07-.43-20.42-1.55-30.25.24l-25.27,10.96c-12.2,1.84-24.58,0-37.09.79v24.32s40.87-.08,40.87-.08ZM11.32,314.79h103.15s-.13-68.31-.13-68.31l-38.45,32.23c-7.04,6.03-15.59,9.16-24.96,9.19H11.2s.11,26.89.11,26.89Z" />
+                            <path d="M197.27,139.66c1.71,8.54-1,15.9-7.46,20.52s-14.87,4.68-21.34.31c-6.73-4.54-9.72-12.07-7.89-20.86-7.73,2.14-14.12,5.02-20.76,8.36-2.84,1.43-6.12-.24-7.27-3.05-.99-2.44-.06-5.64,2.97-7.31,25.97-14.33,59.05-16.74,84.23.42,2.69,1.83,3.54,5.23,1.69,8-1.69,2.52-5.07,3.29-8.02,1.35-4.94-3.25-10.04-5.62-16.14-7.74ZM186.53,144.79c0-4.21-3.41-7.61-7.61-7.61s-7.61,3.41-7.61,7.61,3.41,7.61,7.61,7.61,7.61-3.41,7.61-7.61Z" />
+                            <path d="M84.28,378.13c-.57,3.49-3.06,5.23-6.06,5.12-2.4-.09-5.73-2.66-5.21-5.87l5.24-31.97c.51-3.13,3.72-4.93,6.47-4.48,2.55.42,5.15,3.1,4.65,6.14l-5.09,31.07Z" />
+                        </svg>
+                    <h3 class="font-texto font-semibold uppercase tracking-wide text-lg md:text-base lg:text-lg mt-8">
+                        Paredes que dan para mucho
+                    </h3>
+                    <p class="font-texto text-sm leading-relaxed mt-3 max-w-xs md:text-xs lg:text-sm">
+                        Reservamos un espacio gratuito para que artistas y creadores puedan mostrar sus obras, compartir su talento y acercar el arte a quienes nos visitan.
+                    </p>
+                </li>
+
+                <!-- CANICAS -->
+                <li class="flex flex-col items-center" data-aos="fade-up">
+                    <svg class="h-28 w-auto text-granate md:h-24 lg:h-28" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 355.29 383.05" fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M90.56.05c36.66,3.94,65.99,32,72.13,67.23,6.59,37.82-13.29,74.12-46.99,89.24-35.25,15.81-76.34,5.18-99.24-25.43C-1.6,106.95-5.11,74.63,7.48,47.35S45.21,3.5,73.75,0l16.81.05ZM135.66,127.72c25.81-29.96,21.54-74.66-7.56-99.67C99.1,3.12,54.74,5.48,28.86,34.97c3.88,3.54,8.51,5.38,13.45,6.63l28.03,7.09c38.15,9.65,70.45,35.83,65.31,79.02ZM66.07,84.09l22.03,9.72c14.98,6.61,26.84,17.13,36.08,30.86,2.88-15.68-2.99-29.6-12.69-40.94-16.87-18.28-40.94-23.93-64.78-29.42-6.23-1.44-11.92-3.24-18.16-5.49,2.89,9.52,8.95,17.09,16.35,22.99,2.84,2.26,3.14,5.97,1.03,8.38-2.42,2.75-5.91,2.3-8.64.01-8.96-7.53-15.71-16.6-19.66-27.86-13.4,29.19-5.28,62.82,18.07,83.01,23.37,20.21,57.65,22.97,83.96,6.24-6.34-17.17-19.36-30-35.47-37.16l-22.28-9.9c-3.09-1.37-4.37-4.26-3.4-7.14s4.19-4.79,7.56-3.31Z" />
+                        <path d="M355.29,188.02c0,45.33-36.74,82.07-82.07,82.07s-82.07-36.74-82.07-82.07,36.74-82.07,82.07-82.07,82.07,36.74,82.07,82.07ZM300.28,176.86c17.59,21.35,22.28,46.26,10.76,70.95,33.95-21.43,42.57-65.69,21.74-98.12-20.77-32.34-64.17-42.35-97.03-21.64,3.21,4.65,6.93,7.69,11.35,10.34l26.18,15.7c10.24,6.14,18.92,13.59,26.99,22.76ZM248.01,192.48c-15.43-13.68-27.04-29.4-27.87-51.2-20.8,23.28-23.66,58.06-6.62,84.86,16.51,25.97,48.76,38.61,78.66,30.07-1.17-17.67-9.27-33.61-22.25-44.82l-21.91-18.91ZM301.34,241.16c7.13-13.59,5.74-28.48.02-41.79-4.91-10.81-12.54-19.36-21.7-27-9.63-7.51-19.73-13.65-30.41-19.65-6.33-3.55-12.03-7.15-17.69-11.75.06,18.11,10.77,31.07,23.37,42.73l21,17.95c12.19,10.42,20.42,23.61,25.41,39.51Z" />
+                        <path d="M81.42,320.53c-21.11-.14-40-5.6-54.06-20.9-.38,23.3,10.86,45.03,28.37,57.96,19.63,14.5,44.13,17.87,66.58,9.93,3.27-1.16,6.15.83,7.08,3.44s-.18,5.91-3.1,7c-12.07,4.49-24.53,5.99-37.01,4.58-38.74-4.36-68.35-34.92-72.63-72.21-4.49-39.1,19.36-75.15,55.32-87.18,38-12.71,78.73,3.67,97.72,37.47s11.38,77.96-19.12,103.48c-2.6,2.18-5.98,2.06-8.07-.21-2.38-2.58-1.82-6.14.89-8.46,5.12-4.39,9.26-8.99,13.43-14.64-12.24-13.49-30.49-19.95-48.74-20.07l-26.66-.18ZM113.04,275.14c26.03,5.07,45.49,20.52,52.73,46.61,11.83-37.93-10.11-77.29-46.8-88.54-36.78-11.27-76.57,9.09-88.19,46.29,5.53,1.63,10.67,1.39,16.04.43,21.89-3.91,43.74-8.67,66.22-4.79ZM109.26,309.56c16.31.11,31.06,4.81,44.8,13.73-2.87-13.01-11.51-23-22.65-29.6s-24.2-8.82-37.61-8.93c-12.85.53-25.1,2.49-37.7,4.95-6.71,1.31-13.01,2.14-20.05,2.27,10.6,13.22,28.86,17.29,45.87,17.4l27.34.18Z" />
+                    </svg>
+                    <h3 class="font-texto font-semibold uppercase tracking-wide text-lg md:text-base lg:text-lg mt-8">
+                        La diversión en los detalles
+                    </h3>
+                    <p class="font-texto text-sm leading-relaxed mt-3 max-w-xs md:text-xs lg:text-sm">
+                        Un circuito de canicas recorre una de nuestras paredes y convierte cualquier espera en un momento de curiosidad y diversión para pequeños y mayores.
+                    </p>
+                </li>
+
+            </ul>
+
+            </div>
+
+        </section>
+
+<!-- RESEÑAS -->
+<section id="resenas" class="bg-granate text-crema px-6 py-16 overflow-hidden lg:px-12 lg:py-24">
+
+ <div class="relative w-fit mx-auto" data-aos="fade-up">
+
+    <!-- Rayitas decorativas (arriba a la derecha) -->
+    <svg class="absolute -top-6 -right-6 w-8 sm:-top-8 sm:-right-10 sm:w-10 lg:-top-10 lg:-right-14 lg:w-14 text-crema rotate-270"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.67 58.55" fill="currentColor"
+        aria-hidden="true" focusable="false">
+        <rect x="39.49" y="-14.92" width="2.62" height="52.89" transform="translate(14.27 44.6) rotate(-67.04)" />
+        <rect x="13.78" y="15.97" width="2.54" height="46.52" transform="translate(-20.62 17.02) rotate(-37.11)" />
+    </svg>
+
+    <h2 class="font-titulo uppercase leading-ajustado text-center text-5xl sm:text-7xl lg:text-8xl">
+        No lo decimos<br>nosotros,<br>lo hacéis<br>
+        <!-- "Vosotros" con subrayado a mano -->
+        <span class="relative inline-block">
+            vosotros
+            <svg class="absolute left-0 -bottom-1 w-full h-2 sm:-bottom-2 sm:h-3 lg:h-4 text-crema"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602.18 65.61" preserveAspectRatio="none"
+                fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M11.46,64.67c18.26-5.6,36.64-10.79,55.14-15.55,9.16-2.36,18.34-4.61,27.55-6.77,4.6-1.08,9.22-2.13,13.83-3.15,2.31-.51,4.62-1.02,6.93-1.52,1.07-.23,2.13-.46,3.2-.69.02,0,1.77-.37.75-.16-.88.19,1.1-.23,1.28-.27,37.21-7.79,74.76-13.89,112.52-18.32,36.88-4.32,74.69-7.01,112.78-8.01,37.75-.99,75.26-.32,112.82,2.1,37.93,2.44,75.76,6.58,113.32,12.43,4.67.73,9.34,1.49,14.01,2.27,4.67.78,10.81-1.05,14.54-3.89,3.34-2.56,2.49-5.07-1.54-5.75-38.03-6.36-76.35-10.98-114.8-13.83C445.12.69,406.33-.45,367.57.16c-39.06.61-78.06,3.06-116.91,7.16-38.16,4.03-76.15,9.77-113.79,17.23-38.4,7.6-76.46,16.85-114.01,27.91-4.54,1.34-9.06,2.7-13.59,4.09-2.36.72-10.2,3.05-9.19,6.82s9.3,1.94,11.37,1.31h0Z" />
+            </svg>
+        </span>
+    </h2>
+
+</div>
+        <ul class="grid grid-cols-1 gap-8 mt-14 items-start md:grid-cols-2 md:gap-x-8 md:gap-y-10 lg:grid-cols-3 lg:mt-20">
+
+            <!-- Reseña 1 -->
+            <li class="bg-crema text-granate rounded-2xl p-5 shadow-lg cursor-grab active:cursor-grabbing cursor-grab active:cursor-grabbing -rotate-2 mr-4 transition duration-300 hover:rotate-0 hover:-translate-y-2 md:mr-0">
+                <header class="flex items-center gap-3">
+                    <span class="size-12 shrink-0 rounded-full bg-granate text-crema grid place-items-center font-texto font-semibold" aria-hidden="true">E</span>
+                    <div>
+                        <p class="font-texto font-semibold text-sm">Adina</p>
+                        <p class="font-texto text-xs opacity-60">hace 2 meses</p>
+                    </div>
+                </header>
+                <p class="text-estrella text-xl mt-3" aria-label="5 de 5 estrellas">★★★★★</p>
+                <p class="font-texto text-base leading-relaxed mt-3 line-clamp-6">
+                    Pizza de masa fina increíblemente buena, los ingredientes se mezclan a la perfección y están en el punto de gratinado perfecto, repetiremos
+                </p>
+            </li>
+
+            <!-- Reseña 2 -->
+            <li class="bg-crema text-granate rounded-2xl p-5 shadow-lg cursor-grab active:cursor-grabbing cursor-grab active:cursor-grabbing rotate-2 ml-4 transition duration-300 hover:rotate-0 hover:-translate-y-2 md:ml-0 md:mt-10 lg:mt-16">
+                <header class="flex items-center gap-3">
+                    <span class="size-12 shrink-0 rounded-full bg-granate text-crema grid place-items-center font-texto font-semibold" aria-hidden="true">D</span>
+                    <div>
+                        <p class="font-texto font-semibold text-sm">Pepe Valenciano</p>
+                        <p class="font-texto text-xs opacity-60">hace 2 años</p>
+                    </div>
+                </header>
+                <p class="text-estrella text-xl mt-3" aria-label="5 de 5 estrellas">★★★★★</p>
+                <p class="font-texto text-base leading-relaxed mt-3 line-clamp-6">
+                    Local pequeño, acogedor. Carta de pizzas, tres tamaños. También puedes pedir otras cosas. El personal es joven, agradables y con buen hacer. Un tren te va diciendo cuál es tu turno de pedido.
+                </p>
+            </li>
+
+            <!-- Reseña 3 -->
+            <li class="bg-crema text-granate rounded-2xl p-5 shadow-lg cursor-grab active:cursor-grabbing cursor-grab active:cursor-grabbing -rotate-1 mr-4 transition duration-300 hover:rotate-0 hover:-translate-y-2 md:mr-0 lg:mt-6">
+                <header class="flex items-center gap-3">
+                    <span class="size-12 shrink-0 rounded-full bg-granate text-crema grid place-items-center font-texto font-semibold" aria-hidden="true">Y</span>
+                    <div>
+                        <p class="font-texto font-semibold text-sm">Juan Carlos Rodríguez</p>
+                        <p class="font-texto text-xs opacity-60">hace 5 meses</p>
+                    </div>
+                </header>
+                <p class="text-estrella text-xl mt-3" aria-label="5 de 5 estrellas">★★★★★</p>
+                <p class="font-texto text-base leading-relaxed mt-3 line-clamp-6">
+                    Siempre será una de las mejores pizzerías de Guadalajara. Calidad/ precio y mucha tradición por encima de todo. Muy recomendable
+                </p>
+            </li>
+
+            <!-- Reseña 4 -->
+            <li class="bg-crema text-granate rounded-2xl p-5 shadow-lg cursor-grab active:cursor-grabbing cursor-grab active:cursor-grabbing rotate-2 ml-4 transition duration-300 hover:rotate-0 hover:-translate-y-2 md:ml-0 lg:-mt-6">
+                <header class="flex items-center gap-3">
+                    <span class="size-12 shrink-0 rounded-full bg-granate text-crema grid place-items-center font-texto font-semibold" aria-hidden="true">E</span>
+                    <div>
+                        <p class="font-texto font-semibold text-sm">Thomas S.</p>
+                        <p class="font-texto text-xs opacity-60">hace 9 meses</p>
+                    </div>
+                </header>
+                <p class="text-estrella text-xl mt-3" aria-label="5 de 5 estrellas">★★★★★</p>
+                <p class="font-texto text-base leading-relaxed mt-3 line-clamp-6">
+                    Muy buena pizzería. Personal muy amable. Todas las pizzas hechas a mano y muy sabrosas.
+                </p>
+            </li>
+
+            <!-- Reseña 5 -->
+            <li class="bg-crema text-granate rounded-2xl p-5 shadow-lg cursor-grab active:cursor-grabbing cursor-grab active:cursor-grabbing -rotate-2 mr-4 transition duration-300 hover:rotate-0 hover:-translate-y-2 md:mr-0 md:mt-4 lg:-mt-2">
+                <header class="flex items-center gap-3">
+                    <span class="size-12 shrink-0 rounded-full bg-granate text-crema grid place-items-center font-texto font-semibold" aria-hidden="true">L</span>
+                    <div>
+                        <p class="font-texto font-semibold text-sm">Lucía Muñoz Aparicio</p>
+                        <p class="font-texto text-xs opacity-60">hace 3 meses</p>
+                    </div>
+                </header>
+                <p class="text-estrella text-xl mt-3" aria-label="5 de 5 estrellas">★★★★★</p>
+                <p class="font-texto text-base leading-relaxed mt-3 line-clamp-6">
+                    Pasé por aquí de casualidad y vi los buenos comentarios en Reseñas y no mentían... me ha encantado la pizza... no sabía qué sabor elegir y me dieron su opinión... increíble calidad-precio. El personal muy amable. Merece la pena esperar.
+                </p>
+            </li>
+
+            <!-- Reseña 6 -->
+            <li class="bg-crema text-granate rounded-2xl p-5 shadow-lg cursor-grab active:cursor-grabbing cursor-grab active:cursor-grabbing rotate-1 ml-4 transition duration-300 hover:rotate-0 hover:-translate-y-2 md:ml-0 lg:mt-8">
+                <header class="flex items-center gap-3">
+                    <span class="size-12 shrink-0 rounded-full bg-granate text-crema grid place-items-center font-texto font-semibold" aria-hidden="true">M</span>
+                    <div>
+                        <p class="font-texto font-semibold text-sm">Mara</p>
+                        <p class="font-texto text-xs opacity-60">hace 4 meses</p>
+                    </div>
+                    
+                </header>
+                <p class="text-estrella text-xl mt-3" aria-label="5 de 5 estrellas">★★★★★</p>
+                <p class="font-texto text-base leading-relaxed mt-3 line-clamp-6">
+                    Cenamos allí y nos gustó mucho. Buenas pizzas. Bastante variedad y ves hacerlas delante de ti. El servicio de 10, amables y simpáticos.
+                </p>
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
