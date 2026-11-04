@@ -38,3 +38,4 @@ if ($('#resenas').length && $(window).width() >= 768) {
         stack: '#resenas li'
     });
 }
+
