@@ -201,6 +201,80 @@
             </div>
         </section>
 
+        <!-- ================= BANNER 2 ================= -->
+         <div class="marquee">
+            <a href="#" aria-label="Descubre nuestra carta" class="group block overflow-hidden bg-black/30 py-4 font-titulo text-5xl whitespace-nowrap text-crema/60 uppercase md:text-8xl">
+                <!-- esto es lo que se mueve dentro del banner -->
+                <span
+                    aria-hidden="true"
+                    class="flex w-max motion-safe:animate-[marquee-move-text_25s_linear_infinite] group-hover:[animation-play-state:paused] group-focus-visible:[animation-play-state:paused]">
+                    <span class="flex min-w-[100vw] shrink-0 items-center justify-around gap-8 px-4">
+                        <span>¿UNA PIZCA MÁS? INICIA SESIÓN</span>
+                        <span>¿UNA PIZCA MÁS? INICIA SESIÓN</span>
+                    </span>
+
+                    <span class="flex min-w-[100vw] shrink-0 items-center justify-around gap-8 px-4">
+                        <span>¿UNA PIZCA MÁS? INICIA SESIÓN</span>
+                        <span>¿UNA PIZCA MÁS? INICIA SESIÓN</span>
+                    </span>
+                </span>
+                <!-- aqui termina lo que se mueve -->
+            </a>
+        </div>
+
+
+        <!-- ================= EXPOSICIÓN MENSUAL ================= -->
+        <section class="bg-crema px-5 py-16 text-granate md:px-12 md:py-24 overflow-hidden">
+            <div class="mx-auto grid max-w-[90rem] items-center gap-10 lg:grid-cols-[1fr_1.5fr_1fr] lg:gap-8">
+                <div class="lg:self-start lg:pt-10">
+                    <!-- lo de borded-b es lo que hace las lineas -->
+                    <h2 class="border-b border-granate pb-5 font-titulo text-5xl leading-compacto md:text-6x relative lg:border-b-0 lg:after:absolute lg:after:bottom-0 lg:after:right-0 lg:after:h-px lg:after:w-screen lg:after:bg-granate">Exposición<br><span class="block pl-12">mensual</span></h2>
+                    <p class="mt-5 text-sm">Cada mes, nuestro local se convierte en un espacio para descubrir el trabajo de artistas locales.</p>
+                </div>
+
+                <!-- texto circular: es un recorrido invisible que luego sigue el texto-->
+                <div class="relative mx-auto aspect-square w-full max-w-xl">
+                    <!-- viewBox establece unas coordenadas de 500x500 y size-full lo adapta al contenedor -->
+                    <!-- motion-safe:animate-spin motion-safe:[animation-duration:60s] para que gire -->
+                    <svg viewBox="0 0 500 500" class="pointer-events-none absolute inset-0 size-full motion-safe:animate-spin motion-safe:[animation-duration:60s]">
+                        <!-- defs es donde está el circulo invisible. M250, 250 es donde está el centro, una vez estás colocado en el centro m -220,0 te dice que levantes y te coloques a 220 unidades a la izq, y ahi es donde se empieza a dibujar la circunferencia. luego cuando ya estás colocado ahi, a 220,220 0 1,1 440,0 y a 220,220 0 1,1 -440,0 dibujan cada una medio círculo -->
+                        <defs>
+                            <path id="circulo-expo" d="M 250,250
+                             m -220,0
+                             a 220,220 0 1,1 440,0
+                             a 220,220 0 1,1 -440,0">
+                            </path>
+                        </defs>
+
+                        <!-- al poner href="#circulo-expo" conectamos el texto con el recorrido que tiene que seguir, textLength="1382 para q ocupe más o menos toda la circuncerencia y lengthAdjust="spacing" ajusta los espacios para llegar a esa longitud  -->
+                        <text fill="currentColor" class="font-texto text-[12px] uppercase">
+                            <textPath href="#circulo-expo" textLength="1382" lengthAdjust="spacing">EXPOSICIÓN MENSUAL EN PIZCA · ESTE MES: JOSE LUIS RANZ   EXPOSICIÓN MENSUAL EN PIZCA · ESTE MES: JOSE LUIS RANZ   EXPOSICIÓN MENSUAL EN PIZCA · ESTE MES: JOSE LUIS RANZ </textPath>
+                        </text>
+                    </svg>
+
+                    <!-- para que las fotos cambien al hacer clic, las hago como un button que cambie con js -->
+                    <!-- top-1/2 left-1/2 para ponerlo en la esquina arriba izq del contenedor y -translate-x-1/2 -translate-y-1/2 lo desplaza la mitad de su tamaño para centrarlo mejor -->
+                    <!-- touch-pan-y para poder seguir haciendo scroll vertical -->
+                    <button id="carrusel-expo" type="button" class="absolute top-1/2 left-1/2 aspect-[4/4] w-[58%] -translate-x-1/2 -translate-y-1/2 touch-pan-y  cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-granate">
+                        <!-- lo de foto-expo está creado en el css con  el borde blanco, la sombra, la animación... -->
+                        <!-- data-pos="0" indica la posición en la fila -->
+                        <img src="imagenes/expo-presentacion.webp" alt="" draggable="false" class="foto-expo" data-pos="0">
+                        <img src="imagenes/expo-cuadros.webp" alt="" draggable="false" class="foto-expo" data-pos="1">
+                        <img src="imagenes/expo-mascuadros.webp" alt="" draggable="false" class="foto-expo" data-pos="2">
+                        <img src="imagenes/expo-artista.webp" alt="" draggable="false" class="foto-expo" data-pos="3">
+                    </button>
+
+                    <p id="estado-expo" class="sr-only" aria-live="polite">Foto 1 de 4</p>
+
+                </div>
+                
+                <div class="lg:self-end lg:pb-10">
+                    <h3 class="border-b border-granate pb-5 font-titulo text-5xl leading-compacto md:text-6xl relative lg:border-b-0 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:h-px lg:after:w-screen lg:after:bg-granate">Noviembre<br>es de…</h3>
+                    <p class="mt-5 text-sm"> José Luis Ranz, que llena Pizca de rincones, paisajes y pequeños detalles que a veces pasan desapercibidos. ¡Una exposición para mirar con calma y disfrutar!.</p>
+                </div>
+            </div>
+        </section>
+
 
     <!-- este es el botón para cambiar de modo oscuro a claro, que se queda fijo en la página en vez de meterlo en el menú -->
      <!-- lo de focus es para cuando navegas sin ratón, con el tab --> 

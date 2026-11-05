@@ -85,3 +85,64 @@ $(function () {
         $(this).text(abierto ? 'Cerrar' : 'Menú');
     });
 });
+
+
+
+// Fotos de la exposición: clic y deslizamiento
+$(function () {
+    const carrusel = document.getElementById('carrusel-expo');
+
+    // Este carrusel solo existe en la home
+    if (!carrusel) return;
+
+    const fotos = carrusel.querySelectorAll('.foto-expo');
+    let actual = 0;
+    let inicioX = 0;
+    let inicioY = 0;
+    let omitirClic = false;
+
+    function cambiarFoto(direccion) {
+        actual = (actual + direccion + fotos.length) % fotos.length;
+
+        fotos.forEach(function (foto, i) {
+            foto.dataset.pos = (i - actual + fotos.length) % fotos.length;
+        });
+
+        $('#estado-expo').text(
+            'Foto ' + (actual + 1) + ' de ' + fotos.length
+        );
+    }
+
+    carrusel.addEventListener('pointerdown', function (evento) {
+        if (!evento.isPrimary || evento.button !== 0) return;
+
+        inicioX = evento.clientX;
+        inicioY = evento.clientY;
+        omitirClic = false;
+
+        carrusel.setPointerCapture(evento.pointerId);
+    });
+
+    carrusel.addEventListener('pointerup', function (evento) {
+        if (!evento.isPrimary || evento.button !== 0) return;
+
+        const distanciaX = evento.clientX - inicioX;
+        const distanciaY = evento.clientY - inicioY;
+
+        if (Math.abs(distanciaX) > 40 &&
+            Math.abs(distanciaX) > Math.abs(distanciaY)) {
+            cambiarFoto(distanciaX < 0 ? 1 : -1);
+            omitirClic = true;
+        }
+    });
+
+    carrusel.addEventListener('click', function (evento) {
+        // Evita cambiar dos veces después de deslizar
+        if (omitirClic && evento.detail !== 0) {
+            omitirClic = false;
+            return;
+        }
+
+        cambiarFoto(1);
+    });
+});
