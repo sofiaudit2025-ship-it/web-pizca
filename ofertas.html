@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ofertas · Pizca</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Aquí van los scripts del menú, igual que en vuestro index.html -->
+
+    <style type="text/tailwindcss">
+        @theme static {
+            --color-granate: #681211;
+            --color-crema: #FAFAF1;
+
+            --font-titulo: "Anton", sans-serif;
+            --font-texto: "Barlow", sans-serif;
+
+            --text-sub-m: 3.5rem;
+            --text-sub-l: 4rem;
+            --text-sub-xl: 5rem;
+
+            --leading-ajustado: 1.05;
+        }
+    </style>
+</head>
+<body class="bg-granate text-crema dark:bg-crema dark:text-granate font-texto">
+
+    <header class="sticky top-0 z-20 border-b border-crema/30 bg-granate/95 backdrop-blur text-crema font-texto">
+        <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4 md:flex-nowrap">
+            <a href="index.html" class="block shrink-0 md:flex-1">
+                <img src="css/img/logo-sinestrella-blanco.webp" alt="Pizca" class="h-9 w-auto md:h-12">
+            </a>
+
+            <div class="flex shrink-0 items-center justify-end gap-2 md:order-last md:flex-1">
+                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
+                        class="min-h-11 rounded-full border border-crema/40 px-4 py-2 text-sm text-crema md:hidden">
+                    Menú
+                </button>
+                <a href="carta.html" class="hidden min-h-11 items-center gap-6 rounded-full border border-crema/40 px-6 py-2 text-xs uppercase hover:bg-crema hover:text-granate md:inline-flex">Pedir ahora<span aria-hidden="true">→</span></a>
+            </div>
+
+            <nav id="panel-menu" class="invisible absolute top-full left-0 w-full h-[50dvh] overflow-y-auto -translate-y-4 opacity-0 transition-[opacity,translate,visibility] duration-300 ease-out motion-reduce:transition-none md:static md:visible md:h-auto md:w-auto md:shrink-0 md:translate-y-0 md:opacity-100 border-[0.5px] border-crema/30 rounded-b-3xl md:border-0 md:rounded-none">
+                <ul id="menu" class="flex h-full flex-col items-center justify-center gap-6 text-lg uppercase md:h-auto md:flex-row md:gap-8 md:text-sm">
+                    <li><a href="carta.html" class="group relative inline-block py-2 hover:text-crema/85">Carta<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
+                    <li><a href="sobrenosotros.html" class="group relative inline-block py-2 hover:text-crema/85">Sobre nosotros<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
+                    <li><a href="ofertas.html" class="group relative inline-block py-2 hover:text-crema/85">Ofertas<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="min-h-[calc(100dvh-5rem)] px-8 py-16 sm:px-12 md:px-32 lg:px-24 xl:px-6">
+    <div class="mx-auto w-full max-w-5xl">
+
+            <!-- TÍTULO -->
+            <section aria-labelledby="titulo-ofertas" class="text-center lg:text-left">
+                <h1 id="titulo-ofertas" class="font-titulo uppercase text-sub-m sm:text-sub-l xl:text-sub-xl leading-ajustado">
+                    <span class="relative inline-block">
+                        Ofertas
+                        <svg class="absolute -right-10 -top-5 w-6
+                                    sm:-right-12 sm:-top-6 sm:w-8
+                                    lg:-right-12 lg:-top-4 lg:w-12
+                                    h-auto pointer-events-none"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.97 71.54"
+                            fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M42.44,50.62l-.21,20.92-10.72-17.49-14.26,17.44,2.67-23.04L1.82,54.19l13.97-16.68L0,28.19l19.52-3.19c-.85-8.47-1.64-15.58-2.05-24.99,5.52,6.86,9.12,12.61,13.79,19.49L42.75,2.67c-.03,7.18-.31,11.34-.86,18.45l19.18-5.3-13.21,14.46,18.11,4.34-16.82,5.86,14.63,16.99-21.34-6.85ZM40.65,48.5l17.86,5.58-11.89-14.4,13.23-4.62-14.83-4.03,10.77-12.08-15.62,4.73.83-16.15-9.44,14.68L19.17,4.7l2.08,21.66-16.41,2.75,13.22,7.85-11.11,13.69,14.64-4.05-1.99,19.49,12.19-14.65,8.99,14.85-.12-17.78Z"/>
+                        </svg>
+                    </span>
+                </h1>
+                <p class="mt-4 text-base lg:text-lg">
+                    Pide tu tarjeta en la tienda y disfruta de descuentos exclusivos por ser cliente de Pizca.
+                </p>
+            </section>
+
+            <!-- LISTA DE OFERTAS -->
+            <section aria-labelledby="titulo-lista" class="mt-12">
+                <h2 id="titulo-lista" class="sr-only">Nuestras ofertas</h2>
+
+                <ul class="border-t border-current">
+
+                <!-- DÍA DE LA SEMANA A PRECIO FIJO -->
+                <li class="border-b border-current py-8 flex flex-col items-center text-center gap-4 lg:flex-row lg:items-center lg:text-left lg:gap-10">
+                    <p class="font-titulo uppercase text-sub-l leading-ajustado lg:w-56 lg:shrink-0">8 €</p>
+                    <div class="max-w-md lg:max-w-none lg:flex-1">
+                        <h3 class="font-titulo uppercase text-3xl leading-ajustado">Martes de pizzas</h3>
+                        <p class="mt-1 leading-snug">
+                            Todos los martes, pizzas medianas a precio especial.
+                            Pide por teléfono o en la tienda.
+                        </p>
+                    </div>
+                </li>
+
+                <!-- PIZZA DEL MES -->
+                <li class="border-b border-current py-8 flex flex-col items-center text-center gap-4 lg:flex-row lg:items-center lg:text-left lg:gap-10">
+                    <p class="font-titulo uppercase text-sub-l leading-ajustado lg:w-56 lg:shrink-0">-2 €</p>
+                    <div class="max-w-md lg:max-w-none lg:flex-1">
+                        <h3 class="font-titulo uppercase text-3xl leading-ajustado">Pizza del mes</h3>
+                        <p class="mt-1 leading-snug">
+                            Cada mes elegimos una pizza de la carta y la ofrecemos con descuento.
+                            Este mes, la pizza 25 años.
+                        </p>
+                    </div>
+                </li>
+
+                <!-- PACK FAMILIAR -->
+                <li class="border-b border-current py-8 flex flex-col items-center text-center gap-4 lg:flex-row lg:items-center lg:text-left lg:gap-10">
+                    <p class="font-titulo uppercase text-sub-l leading-ajustado lg:w-56 lg:shrink-0">22 €</p>
+                    <div class="max-w-md lg:max-w-none lg:flex-1">
+                        <h3 class="font-titulo uppercase text-3xl leading-ajustado">Pack familiar</h3>
+                        <p class="mt-1 leading-snug">
+                            Dos pizzas grandes a elegir y bebidas para compartir en casa.
+                        </p>
+                    </div>
+                </li>
+
+                <!-- TARJETA DE FIDELIDAD -->
+                <li class="border-b border-current py-8 flex flex-col items-center text-center gap-6 lg:flex-row lg:items-center lg:text-left lg:gap-10">
+                    <p class="font-titulo uppercase text-sub-l leading-ajustado lg:w-56 lg:shrink-0">-15 %</p>
+                    <div class="max-w-md lg:max-w-none lg:flex-1">
+                        <h3 class="font-titulo uppercase text-3xl leading-ajustado">Tarjeta de cliente</h3>
+                        <p class="mt-1 leading-snug">
+                            Pide tu tarjeta en la tienda y te la sellamos en cada compra.
+                            A la sexta, te hacemos un descuento.
+                        </p>
+
+                        <ol class="mt-5 flex flex-wrap items-center justify-center gap-2 lg:justify-start" aria-label="Sellos de la tarjeta">
+                            <li class="flex size-10 items-center justify-center rounded-full border border-current text-sm">1</li>
+                            <li class="flex size-10 items-center justify-center rounded-full border border-current text-sm">2</li>
+                            <li class="flex size-10 items-center justify-center rounded-full border border-current text-sm">3</li>
+                            <li class="flex size-10 items-center justify-center rounded-full border border-current text-sm">4</li>
+                            <li class="flex size-10 items-center justify-center rounded-full border border-current text-sm">5</li>
+                            <li class="flex size-10 items-center justify-center rounded-full bg-crema text-granate dark:bg-granate dark:text-crema text-sm font-semibold">6</li>
+                        </ol>
+                    </div>
+                </li>
+
+                <!-- CUMPLEAÑOS -->
+                <li class="border-b border-current py-8 flex flex-col items-center text-center gap-4 lg:flex-row lg:items-center lg:text-left lg:gap-10">
+                    <p class="font-titulo uppercase text-sub-l leading-ajustado lg:w-56 lg:shrink-0">-10 %</p>
+                    <div class="max-w-md lg:max-w-none lg:flex-1">
+                        <h3 class="font-titulo uppercase text-3xl leading-ajustado">Tu cumpleaños</h3>
+                        <p class="mt-1 leading-snug">
+                            Enseña tu DNI el día de tu cumpleaños y elige: un 10 % de descuento
+                            o una porción de tarta de regalo.
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+
+                <p class="mt-6 text-sm">
+                    Las ofertas se canjean en la tienda. Pregunta por tu tarjeta en el mostrador.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+        <button id="boton-tema" type="button" aria-label="Cambiar tema" aria-pressed="false" class="fixed right-5 bottom-5 z-50 inline-flex size-11 items-center justify-center rounded-full border border-crema/40 bg-granate text-crema hover:border-crema focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-crema"><i class="fa-solid fa-moon"></i></button>
+
+    <script src="js/tema.js"></script>
+
+    <!-- Aquí irá el <footer> de la web -->
+</body>
+</html>
