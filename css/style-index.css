@@ -1,0 +1,55 @@
+/* =========================================================
+   Pizzeria Pizca · CSS propio
+   ========================================================= */
+
+@keyframes marquee-move-text {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+/* Fotos apiladas de la exposición */
+.foto-expo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px solid white;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 20%);
+    pointer-events: none;
+    user-select: none;
+    transition: transform 0.5s ease;
+}
+
+.foto-expo[data-pos="0"] {
+    z-index: 3;
+    transform: rotate(3deg);
+}
+
+.foto-expo[data-pos="1"] {
+    z-index: 2;
+    transform: translate(-8%, 1%) rotate(-8deg);
+}
+
+.foto-expo[data-pos="2"] {
+    z-index: 1;
+    transform: translate(5%, -1%) rotate(10deg);
+}
+
+.foto-expo[data-pos="3"] {
+    z-index: 0;
+    transform: translate(-3%, -3%) rotate(-4deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .foto-expo {
+        transition: none;
+    }
+}
