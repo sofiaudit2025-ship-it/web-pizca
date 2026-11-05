@@ -39,3 +39,32 @@ if ($('#resenas').length && $(window).width() >= 768) {
     });
 }
 
+
+
+
+
+
+
+// funcion para mover las pizzas de la portada por toda la página y que vuelvan a su sitio cuando sueltas
+$(function () {
+    if ($('#inicio').length && $(window).width() >= 768) {
+        $('#inicio .pizza-portada').draggable({
+            containment: 'document',
+            helper: 'clone',
+            appendTo: 'body',
+            zIndex: 1000,
+            cursor: 'grabbing',
+            revert: true,
+            revertDuration: 1800,
+
+            start: function () {
+                $(this).css('opacity', 0);
+            },
+
+            stop: function () {
+                $(this).css('opacity', '');
+            }
+        });
+    }
+});
+
