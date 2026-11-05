@@ -69,7 +69,8 @@ html.dark {
 }
 
 /* Imágenes blancas de la interfaz (logo, subrayados): en oscuro sobre fondo claro se perderían */
-html.dark img[src^="css/img/"] {
+html.dark img[src="imagenes/logo-sinestrella-blanco.webp"],
+html.dark img[src="imagenes/subrayado-manuscrito.webp"] {
     filter: brightness(0);
 }
 
