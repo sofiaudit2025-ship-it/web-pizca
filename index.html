@@ -62,7 +62,7 @@
             </div>
 
              <!-- navegador con las lineas subrayando -->
-            <nav id="panel-menu" class="invisible absolute top-full left-0 w-full h-[50dvh] overflow-y-auto -translate-y-4 opacity-0 transition-[opacity,translate,visibility] duration-300 ease-out motion-reduce:transition-none md:static md:visible md:h-auto md:w-auto md:shrink-0 md:translate-y-0 md:opacity-100 border-[0.5px] border-crema/30 rounded-b-3xl md:border-0 md:rounded-none">
+            <nav id="panel-menu" class="bg-granate md:bg-transparent invisible absolute top-full left-0 w-full h-[50dvh] overflow-y-auto -translate-y-4 opacity-0 transition-[opacity,translate,visibility] duration-300 ease-out motion-reduce:transition-none md:static md:visible md:h-auto md:w-auto md:shrink-0 md:translate-y-0 md:opacity-100 border-[0.5px] border-crema/30 rounded-b-3xl md:border-0 md:rounded-none">
                 <ul id="menu" class="flex h-full flex-col items-center justify-center gap-6 text-lg uppercase md:h-auto md:flex-row md:gap-8 md:text-sm">
                     <!-- para poner la imagen de la linea le doy la propiedad group al enlace del menu y a la imagen le digo que al pasar por group se active -->
                     <li><a href="carta.html" class="group relative inline-block py-2 hover:text-crema/85">Carta<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
@@ -274,6 +274,155 @@
                 </div>
             </div>
         </section>
+
+        <!-- ================= HAZTE SOCIO ================= -->
+        <section id="club" class="overflow-hidden border-t border-granate/20 bg-crema px-5 py-16 text-granate md:px-12 md:py-24">
+            <div class="mx-auto max-w-[90rem]">
+                <div class="text-center">
+                    <p class="text-sm uppercase tracking-widest">Club Pizca</p>
+                    <h2 class="mt-6 font-titulo text-5xl leading-ajustado uppercase sm:text-7xl lg:text-8xl">Hazte socio<br>de Pizca.</h2>
+                </div>
+
+                <div class="mt-14 grid items-center gap-12 lg:mt-20 lg:grid-cols-[1fr_1.5fr_1fr]">
+                    <div class="hidden justify-center lg:flex">
+                        <div class=" relative rotate-12 px-10 py-6">
+                            <span class="pointer-events-none absolute">
+                                <!-- esto es el garabato que rodea lo de una pizca de ventajas, que en vez de ponerlo con imagenes asi es menos lio -->
+                                <svg class="w-full h-full text-granate" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 1636 522.29" preserveAspectRatio="none" fill="currentColor" focusable="false">
+                                        <path d="M1553.85,206.99c-36.2-21.01-85-40.49-145.06-57.9C1062.03,48.56,654.53,32.9,290.79,106.11c-3.25.65-5.35,3.82-4.7,7.07.65,3.25,3.82,5.36,7.07,4.7,361.91-72.84,767.32-57.26,1112.29,42.74,59.12,17.14,107.03,36.23,142.38,56.75,43.97,25.53,69.2,53.56,74.97,83.33,4.55,23.45-3.93,48.39-24.51,72.13-19.42,22.39-49.44,43.23-84.55,58.68-70.24,30.9-156.98,44.04-240.25,53.63-162.18,18.68-328.57,27.03-494.56,24.8-165.99-2.23-331.66-15.03-492.4-38.05-65.04-9.31-138.99-21.75-193.56-51.7-24.16-13.25-43.36-29.57-57.07-48.51-12.81-17.7-20.57-37.27-23.04-58.18-5.5-46.47,15.57-95.12,57.81-133.49,69.99-63.58,191.57-110.47,361.34-139.38C605.41,11.11,793.63,4.26,976.31,20.82c182.65,16.56,360,56.54,512.86,115.62,3.09,1.19,6.56-.34,7.76-3.43,1.19-3.09-.34-6.57-3.43-7.76-77.55-29.97-161.18-55.12-248.56-74.73-86.22-19.36-176.23-33.37-267.54-41.64C793.69-7.79,604.4-.89,430,28.8,257.93,58.1,134.32,105.99,62.6,171.13,17.45,212.14-5.02,264.54.94,314.91c5.59,47.23,36.22,88.35,86.25,115.8,56.34,30.91,131.56,43.59,197.64,53.05,161.25,23.09,327.44,35.93,493.94,38.17,17.57.24,35.12.35,52.69.35,148.96,0,297.88-8.47,443.4-25.23,84.21-9.7,172.01-23.03,243.71-54.57,37.23-16.38,67.93-37.75,88.78-61.8,23.08-26.62,32.5-55.07,27.22-82.27-6.46-33.32-33.62-64.08-80.73-91.42Z" />
+                                    </svg>
+                            </span>
+                            <p class="relative text-center text-xl uppercase">Una pizca<br>de ventajas</p>
+                        </div>
+                    </div>
+                    <div class="mx-auto w-full max-w-lg">
+                        <img src="imagenes/tarjetas-club.webp" alt="" class="h-auto w-full">
+                    </div>
+
+                    <!-- divide-y divide-granate/30 crea las líneas finas entre las ventajas -->
+                    <ul class="mx-auto w-full max-w-sm divide-y divide-granate/30">
+                        <li class="flex items-center gap-5 py-5">
+                            <span class="text-2xl">*</span>
+                            <h3 class="font-titulo text-2xl uppercase">Descuentos<br>especiales</h3>
+                        </li>
+                        <li class="flex items-center gap-5 py-5">
+                            <span class="text-2xl">*</span>
+                            <h3 class="font-titulo text-2xl uppercase">Promociones<br>mensuales</h3>
+                        </li>
+                        <li class="flex items-center gap-5 py-5">
+                            <span class="text-2xl">*</span>
+                            <h3 class="font-titulo text-2xl uppercase">Y mucho más</h3>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-16 text-center md:mt-20">
+                    <p class="mx-auto max-w-md text-sm md:text-base">Únete al Club Pizca y disfruta de ventajas pensadas para los que siempre repiten.</p>
+                    <a href="#" class="mt-7 inline-flex min-h-11 items-center gap-8 rounded-full border border-granate px-7 py-3 text-sm uppercase transition-colors hover:bg-granate hover:text-crema focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-granate">Hazte socio <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+     <footer class="bg-crema font-texto">
+        <!-- logo grandote -->
+        <div class="overflow-hidden pt-14 md:pt-24">
+            <a href="index.html" class="mx-auto block w-4/5 max-w-4xl">
+                <div class="shape w-full translate-y-3 md:translate-y-5" role="img"></div>
+            </a>
+        </div>
+
+        <!-- info -->
+         <div class="bg-granate px-5 pt-12 pb-14 text-crema md:px-12 md:pt-14 md:pb-16">
+            <div class="mx-auto grid max-w-[90rem] gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:grid-cols-[1.3fr_1.2fr_0.8fr_0.9fr_1.2fr_1.6fr] xl:gap-6">
+                <!-- contacto -->
+                <div class="lg:border-r lg:border-crema/40 lg:pr-6">
+                    <address class="text-sm">
+                        <p>C. Virgen del Amparo, 12<br>19002 Guadalajara, España</p>
+                        <p class="mt-4">
+                            <a href="tel:+34949213456">(+34) 949 21 34 56</a>
+                            <br>
+                            <a href="mailto:rivasbandit@gmail.com" class="break-words">rivasbandit@gmail.com</a>
+                        </p>
+                    </address>
+
+                    <a href="mailto:rivasbandit@gmail.com" class="mt-4 inline-block text-sm font-semibold uppercase underline underline-offset-4">Contacto</a>
+
+                </div>
+
+                <!-- horario -->
+                <div>
+                    <h2 class="text-base font-semibold uppercase">Horario</h2>
+                    <ul class="mt-4 space-y-2.5 text-xs">
+                        <li><span class="line-through">Lunes</span>: cerrado</li>
+                        <li>Martes: 19:00 - 23:00</li>
+                        <li>Miércoles: 19:00 - 23:00</li>
+                        <li>Jueves: 19:00 - 23:00</li>
+                        <li>Viernes: 19:00 - 00:00</li>
+                        <li>Sábados: 19:00 - 00:00</li>
+                        <li>Domingos: 19:00 - 23:00</li>
+                    </ul>
+                </div>
+
+                <nav>
+                    <h2 class="text-base font-semibold uppercase">Pizca</h2>
+
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="carta.html">Carta</a></li>
+                        <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                        <li><a href="sobrenosotros.html#resenas">Reseñas</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- redes -->
+                 <div>
+                    <h2 class="text-base font-semibold uppercase">Síguenos</h2>
+
+                    <ul class="mt-4 space-y-3 text-sm">
+                        <li>
+                            <a href="#" class="inline-flex items-center gap-3"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-flex items-center gap-3"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+                        </li>
+                    </ul>
+                 </div>
+
+                 <!-- info legal -->
+                  <nav>
+                    <h2 class="text-base font-semibold uppercase">Legal</h2>
+
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de cookies</a></li>
+                    </ul>
+                  </nav>
+
+                  <!-- reseñas-->
+                   <div>
+                        <h2 class="text-base font-semibold uppercase">Reseñas</h2>
+
+                        <div class="mt-4 flex items-center gap-5">
+                            <a href="#" class="block w-16 shrink-0"><img src="imagenes/logo-tripadvisor.webp" alt="Tripadvisor" class="block h-auto w-full"></a>
+
+                            <div>
+                                <p aria-label="Valoración media: 4,8 de 5" class="flex items-baseline gap-1">
+                                    <span class="text-3xl font-semibold">4,8</span>
+                                    <span class="text-sm text-crema/70">/ 5</span>
+                                </p>
+                                <p aria-hidden="true" class="mt-1 text-xs tracking-widest">★★★★★</p>
+                                <a href="#" class="mt-2 inline-block text-sm underline underline-offset-4 hover:text-crema/75">1.200 reseñas</a>
+                            </div>
+                        </div>
+                   </div>
+            </div>
+         </div>
+     </footer>
+
 
 
     <!-- este es el botón para cambiar de modo oscuro a claro, que se queda fijo en la página en vez de meterlo en el menú -->
