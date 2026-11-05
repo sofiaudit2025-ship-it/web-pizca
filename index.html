@@ -90,45 +90,45 @@
 
     <main>
         <!-- ================= PORTADA ================= -->
-        <section id="inicio" class="relative isolate mx-auto min-h-[46rem] max-w-[100rem] overflow-hidden px-5 py-30 md:px-12 md:py-38">
+        <section id="inicio" class="relative isolate mx-auto min-h-[44rem] max-w-[100rem] overflow-hidden px-5 py-26 md:px-12 md:py-36">
             <!-- pizza-portada es una clase propia para identificar las img que puedo mover -->
             <!-- mejor las meto en div para que no se me hagan tan pequeñas con el object-contain -->
-            <div class="pizza-portada absolute z-10 hidden aspect-square select-none md:top-[7%] md:-left-[12%] md:block md:w-[16%] md:cursor-grab md:active:cursor-grabbing">
-                <img src="imagenes/p-serrana.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain">
+            <div class="group pizza-portada absolute z-10 hidden aspect-square select-none md:top-[7%] md:-left-[12%] md:block md:w-[16%] md:cursor-grab md:active:cursor-grabbing">
+                <img src="imagenes/p-serrana.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain motion-safe:animate-spin motion-safe:[animation-duration:35s] transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
-            <div class="pizza-portada absolute z-10 hidden aspect-square select-none md:-top-[4vw] md:left-[54%] md:block md:w-[10%] md:cursor-grab md:active:cursor-grabbing">
-                <img src="imagenes/p-margarita.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain">
+            <div class="group pizza-portada absolute z-10 hidden aspect-square select-none md:-top-[4vw] md:left-[54%] md:block md:w-[10%] md:cursor-grab md:active:cursor-grabbing">
+                <img src="imagenes/p-margarita.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
             <!-- pizza que gira -->
-            <div class="pizza-portada absolute top-4 right-4 z-10 w-24 select-none md:-top-[1.5vw] md:right-[5%] md:w-[15%] md:cursor-grab md:active:cursor-grabbing">
-                <img src="imagenes/p-chorizo.webp" alt="" draggable="false" class="pointer-events-none aspect-square w-full object-contain motion-safe:animate-spin motion-safe:[animation-duration:35s]">
+            <div class="group pizza-portada absolute top-4 right-4 z-10 w-24 select-none md:-top-[1.5vw] md:right-[5%] md:w-[15%] md:cursor-grab md:active:cursor-grabbing">
+                <img src="imagenes/p-chorizo.webp" alt="" draggable="false" class="pointer-events-none aspect-square w-full object-contain motion-safe:animate-spin motion-safe:[animation-duration:35s] transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
-            <div class="pizza-portada absolute z-10 hidden aspect-square select-none md:top-[29%] md:-right-[6%] md:block md:w-[12%] md:cursor-grab md:active:cursor-grabbing">
-                <img src="imagenes/p-margarita.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain">
+            <div class="group pizza-portada absolute z-10 hidden aspect-square select-none md:top-[29%] md:-right-[6%] md:block md:w-[12%] md:cursor-grab md:active:cursor-grabbing">
+                <img src="imagenes/p-margarita.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
-            <div class="pizza-portada absolute bottom-[12%] -left-12 z-10 w-[20%] aspect-square select-none md:bottom-[6%] md:-left-[5%] md:w-[9%] md:cursor-grab md:active:cursor-grabbing">
-                <img src="imagenes/p-serrana.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain">
+            <div class="group pizza-portada absolute bottom-[12%] -left-12 z-10 w-[20%] aspect-square select-none md:bottom-[6%] md:-left-[5%] md:w-[9%] md:cursor-grab md:active:cursor-grabbing">
+                <img src="imagenes/p-serrana.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
             <!-- otra pizza que gira pero para el otro lado -->
-            <div class="pizza-portada absolute z-10 hidden select-none md:bottom-[12%] md:left-[16%] md:block md:w-[11%] md:cursor-grab md:active:cursor-grabbing">
-                <img src="imagenes/p-bacon.webp" alt="" draggable="false" class="pointer-events-none aspect-square w-full object-contain motion-safe:animate-spin motion-safe:[animation-duration:35s] motion-safe:[animation-direction:reverse]">
+            <div class="group pizza-portada absolute z-10 hidden select-none md:bottom-[12%] md:left-[16%] md:block md:w-[11%] md:cursor-grab md:active:cursor-grabbing">
+                <img src="imagenes/p-bacon.webp" alt="" draggable="false" class="pointer-events-none aspect-square w-full object-contain motion-safe:animate-spin motion-safe:[animation-duration:35s] motion-safe:[animation-direction:reverse] transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
-            <div class="pizza-portada absolute -bottom-24 left-[20%] z-10 w-[72%] aspect-square select-none md:-bottom-[17vw] md:left-[23%] md:w-[31%] md:cursor-grab md:active:cursor-grabbing">
-                <img src="imagenes/p-4quesos.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain">
+            <div class="group pizza-portada absolute -bottom-24 left-[20%] z-10 w-[72%] aspect-square select-none md:-bottom-[17vw] md:left-[23%] md:w-[31%] max-w-72 md:max-w-none md:cursor-grab md:active:cursor-grabbing">
+                <img src="imagenes/p-4quesos.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
-            <div class="pizza-portada absolute z-10 hidden aspect-square select-none md:right-[21%] md:bottom-[20%] md:block md:w-[10.5%] md:cursor-grab md:active:cursor-grabbing">
-                <img src="imagenes/p-romana.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain">
+            <div class="group pizza-portada absolute z-10 hidden aspect-square select-none md:right-[21%] md:bottom-[20%] md:block md:w-[10.5%] md:cursor-grab md:active:cursor-grabbing">
+                <img src="imagenes/p-romana.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
-            <div class="pizza-portada absolute z-10 hidden aspect-square select-none md:-right-[5%] md:bottom-[10%] md:block md:w-[18%] md:cursor-grab md:active:cursor-grabbing">
-                <img src="imagenes/p-pizca.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain">
+            <div class="group pizza-portada absolute z-10 hidden aspect-square select-none md:-right-[5%] md:bottom-[5%] md:block md:w-[18%] md:cursor-grab md:active:cursor-grabbing">
+                <img src="imagenes/p-pizca.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain motion-safe:animate-spin motion-safe:[animation-duration:35s] motion-safe:[animation-direction:reverse] transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
 
