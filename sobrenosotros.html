@@ -9,6 +9,9 @@
     <!-- 1. Tipografías -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!--ICONOS DE FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- 2. CSS propio -->
     <link rel="stylesheet" href="styles.css">
 
@@ -41,6 +44,37 @@
 </head>
 
 <body>
+
+    <!-- ================= CABECERA ================= -->
+    <header class="sticky top-0 z-20 border-b border-crema/30 bg-granate/95 backdrop-blur text-crema font-texto">
+        <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4 md:flex-nowrap">
+            <a href="index.html" class="block shrink-0 md:flex-1">
+                <img src="css/img/logo-sinestrella-blanco.webp" alt="Pizca" class="h-9 w-auto md:h-12">
+            </a>
+
+            <div class="flex shrink-0 items-center items-center justify-end gap-2 md:order-last md:flex-1">
+
+                <!-- este botón abre y cierra el menú en móvil -->
+                <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
+                        class="min-h-11 rounded-full border border-crema/40 px-4 py-2 text-sm text-crema md:hidden">
+                    Menú
+                </button>
+                <!-- botón de pedir ahora en ordenador - REVISAR EL TEXTO QUE PONER EN ESTE BOTÓN SI NO VAMOS A HACER PROCESO DE COMPRA-->
+                <a href="carta.html" class="hidden min-h-11 items-center gap-6 rounded-full border border-crema/40 px-6 py-2 text-xs uppercase hover:bg-crema hover:text-granate md:inline-flex">Pedir ahora<span aria-hidden="true">→</span></a>
+            </div>
+
+             <!-- navegador con las lineas subrayando -->
+            <nav id="panel-menu" class="invisible absolute top-full left-0 w-full h-[50dvh] overflow-y-auto -translate-y-4 opacity-0 transition-[opacity,translate,visibility] duration-300 ease-out motion-reduce:transition-none md:static md:visible md:h-auto md:w-auto md:shrink-0 md:translate-y-0 md:opacity-100 border-[0.5px] border-crema/30 rounded-b-3xl md:border-0 md:rounded-none">
+                <ul id="menu" class="flex h-full flex-col items-center justify-center gap-6 text-lg uppercase md:h-auto md:flex-row md:gap-8 md:text-sm">
+                    <!-- para poner la imagen de la linea le doy la propiedad group al enlace del menu y a la imagen le digo que al pasar por group se active -->
+                    <li><a href="carta.html" class="group relative inline-block py-2 hover:text-crema/85">Carta<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
+                    <li><a href="sobrenosotros.html" class="group relative inline-block py-2 hover:text-crema/85">Sobre nosotros<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
+                    <li><a href="#" class="group relative inline-block py-2 hover:text-crema/85">Inicia sesión <img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
 
     <main>
 
@@ -426,6 +460,11 @@
 </section>
 
     </main>
+
+    <!-- este es el botón para cambiar de modo oscuro a claro, que se queda fijo en la página en vez de meterlo en el menú -->
+     <!-- lo de focus es para cuando navegas sin ratón, con el tab --> 
+    <button id="boton-tema" type="button" aria-label="Cambiar tema" aria-pressed="false" class="fixed right-5 bottom-5 z-50 inline-flex size-11 items-center justify-center rounded-full border border-crema/40 bg-granate text-crema hover:border-crema focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-crema"><i class="fa-solid fa-moon"></i></button>
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>

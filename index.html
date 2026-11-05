@@ -44,17 +44,13 @@
 <body class="bg-granate font-texto text-crema antialiased transition-colors duration-500">
 
     <!-- ================= CABECERA ================= -->
-    <header class="sticky top-0 z-20 border-b border-crema/30 bg-granate/95 backdrop-blur text-crema">
+    <header class="sticky top-0 z-20 border-b border-crema/30 bg-granate/95 backdrop-blur text-crema font-texto">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4 md:flex-nowrap">
-            <a href="#inicio" class="block shrink-0 md:flex-1">
+            <a href="index.html" class="block shrink-0 md:flex-1">
                 <img src="css/img/logo-sinestrella-blanco.webp" alt="Pizca" class="h-9 w-auto md:h-12">
             </a>
 
             <div class="flex shrink-0 items-center items-center justify-end gap-2 md:order-last md:flex-1">
-                <!-- este botón cambia entre modo claro y oscuro -->
-                <!-- <button id="boton-tema" type="button" aria-label="cambiar tema" aria-pressed="false"
-                        class=" inline-flex size-11 shrink-0 items-center justify-center rounded-full text-crema/70 hover:bg-crema/10 hover:text-crema">Cambiar tema
-                </button> -->
 
                 <!-- este botón abre y cierra el menú en móvil -->
                 <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
@@ -65,19 +61,9 @@
                 <a href="carta.html" class="hidden min-h-11 items-center gap-6 rounded-full border border-crema/40 px-6 py-2 text-xs uppercase hover:bg-crema hover:text-granate md:inline-flex">Pedir ahora<span aria-hidden="true">→</span></a>
             </div>
 
-            <!-- navegador sin las lineas subrayando -->
-            <!-- <nav class="w-full md:ml-auto md:w-auto" aria-label="Principal">
-                <ul id="menu" class="hidden space-y-2 pb-2 text-sm uppercase md:flex md:items-center md:gap-8 md:space-y-0 md:pb-0">
-                    <li><a href="#inicio" class="block py-2 hover:text-crema/70">Inicio</a></li>
-                    <li><a href="#productos" class="block py-2 hover:text-crema/70">Carta</a></li>
-                    <li><a href="#preguntas" class="block py-2 hover:text-crema/70">Sobre nosotros</a></li>
-                    <li><a href="#visitanos" class="block py-2 hover:text-crema/70">Reserva</a></li>
-                </ul>
-            </nav> -->
-
              <!-- navegador con las lineas subrayando -->
-            <nav class="w-full md:w-auto md:shrink-0" aria-label="Principal">
-                <ul id="menu" class="hidden space-y-2 pb-2 text-sm uppercase md:flex md:items-center md:gap-8 md:space-y-0 md:pb-0">
+            <nav id="panel-menu" class="invisible absolute top-full left-0 w-full h-[50dvh] overflow-y-auto -translate-y-4 opacity-0 transition-[opacity,translate,visibility] duration-300 ease-out motion-reduce:transition-none md:static md:visible md:h-auto md:w-auto md:shrink-0 md:translate-y-0 md:opacity-100 border-[0.5px] border-crema/30 rounded-b-3xl md:border-0 md:rounded-none">
+                <ul id="menu" class="flex h-full flex-col items-center justify-center gap-6 text-lg uppercase md:h-auto md:flex-row md:gap-8 md:text-sm">
                     <!-- para poner la imagen de la linea le doy la propiedad group al enlace del menu y a la imagen le digo que al pasar por group se active -->
                     <li><a href="carta.html" class="group relative inline-block py-2 hover:text-crema/85">Carta<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
                     <li><a href="sobrenosotros.html" class="group relative inline-block py-2 hover:text-crema/85">Sobre nosotros<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
@@ -131,6 +117,14 @@
                 <img src="imagenes/p-pizca.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain motion-safe:animate-spin motion-safe:[animation-duration:35s] motion-safe:[animation-direction:reverse] transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
+            <!-- garabatos estrellas -->
+             <div class="pointer-events-none absolute inset-0 hidden select-none md:block">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute top-[8%] left-[13%] h-auto w-7 opacity-60">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute top-[42%] left-[40%] h-auto w-12 opacity-60">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute top-[49%] right-[18%] h-auto w-6 opacity-60">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute bottom-[12%] left-[18%] h-auto w-6 opacity-60">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute bottom-[15%] right-[19%] h-auto w-6 opacity-60">
+             </div>
 
             <h1 class=" font-titulo text-5xl leading-ajustado uppercase sm:text-portada-sm lg:text-portada-md 2xl:text-portada-xl">Pizzería Pizca</h1>
             <p class="mt-4 font-titulo text-3xl leading-ajustado uppercase sm:text-sub-m lg:text-sub-l 2xl:text-sub-xl">Como el primer día</p>
@@ -171,29 +165,112 @@
                 <div class="mt-16 flex flex-wrap gap-y-12 md:mt-32">
 
                     <article class="w-full px-4 text-center sm:w-1/2 lg:w-1/4">
-                        <img src="css/img/masa-margarita.webp" alt="" class="h-40 w-full object-contain md:h-48">
+                        <!-- para que cada masa lleve a la pizza que es en la pagina de carta -->
+                        <a href="carta.html#margarita">
+                            <img src="css/img/masa-margarita.webp" alt="ver pizza margarita en la carta" class="h-40 w-full object-contain md:h-48">
+                        </a> 
                         <h3 class="mt-12 font-titulo text-4xl leading-ajustado uppercase lg:text-3xl xl:text-4xl 2xl:text-5xl">Margarita</h3>
                         <p class="mx-auto mt-6 max-w-56 text-sm">Jamón de york, tomate, mozzarella y orégano.</p>
                     </article>
 
                     <article class="w-full px-4 text-center sm:w-1/2 lg:w-1/4">
-                        <img src="css/img/masa-bacon.webp" alt="" class="h-40 w-full object-contain md:h-48">
+                        <a href="carta.html#bacon">
+                            <img src="css/img/masa-bacon.webp" alt="" class="h-40 w-full object-contain md:h-48">
+                        </a>
                         <h3 class="mt-12 font-titulo text-4xl leading-ajustado uppercase lg:text-3xl xl:text-4xl 2xl:text-5xl">D’Bacon</h3>
                         <p class="mx-auto mt-6 max-w-56 text-sm">Bacon, tomate, mozzarella y orégano.</p>
                     </article>
 
                     <article class="w-full px-4 text-center sm:w-1/2 lg:w-1/4">
-                        <img src="css/img/masa-quesos.webp" alt="" class="h-40 w-full object-contain md:h-48">
+                        <a href="carta.html#4quesos">
+                            <img src="css/img/masa-quesos.webp" alt="" class="h-40 w-full object-contain md:h-48">
+                        </a>
                         <h3 class="mt-12 font-titulo text-4xl leading-ajustado uppercase lg:text-3xl xl:text-4xl 2xl:text-5xl">Cuatro quesos</h3>
                         <p class="mx-auto mt-6 max-w-56 text-sm">Mozzarella, queso azul, edam y cheddar.</p>
                     </article>
 
                     <article class="w-full px-4 text-center sm:w-1/2 lg:w-1/4">
-                        <img src="css/img/masa-pizca.webp" alt="" class="h-40 w-full object-contain md:h-48">
+                        <a href="carta.html#pizca">
+                            <img src="css/img/masa-pizca.webp" alt="" class="h-40 w-full object-contain md:h-48">
+                        </a>
                         <h3 class="mt-12 font-titulo text-4xl leading-ajustado uppercase lg:text-3xl xl:text-4xl 2xl:text-5xl">Pizca</h3>
                         <p class="mx-auto mt-6 max-w-56 text-sm">Jamón de york, tomate, mozzarella y orégano.</p>
                     </article>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BANNER 2 ================= -->
+         <div class="marquee">
+            <a href="#" aria-label="Descubre nuestra carta" class="group block overflow-hidden bg-black/30 py-4 font-titulo text-5xl whitespace-nowrap text-crema/60 uppercase md:text-8xl">
+                <!-- esto es lo que se mueve dentro del banner -->
+                <span
+                    aria-hidden="true"
+                    class="flex w-max motion-safe:animate-[marquee-move-text_25s_linear_infinite] group-hover:[animation-play-state:paused] group-focus-visible:[animation-play-state:paused]">
+                    <span class="flex min-w-[100vw] shrink-0 items-center justify-around gap-8 px-4">
+                        <span>¿UNA PIZCA MÁS? INICIA SESIÓN</span>
+                        <span>¿UNA PIZCA MÁS? INICIA SESIÓN</span>
+                    </span>
+
+                    <span class="flex min-w-[100vw] shrink-0 items-center justify-around gap-8 px-4">
+                        <span>¿UNA PIZCA MÁS? INICIA SESIÓN</span>
+                        <span>¿UNA PIZCA MÁS? INICIA SESIÓN</span>
+                    </span>
+                </span>
+                <!-- aqui termina lo que se mueve -->
+            </a>
+        </div>
+
+
+        <!-- ================= EXPOSICIÓN MENSUAL ================= -->
+        <section class="bg-crema px-5 py-16 text-granate md:px-12 md:py-24 overflow-hidden">
+            <div class="mx-auto grid max-w-[90rem] items-center gap-10 lg:grid-cols-[1fr_1.5fr_1fr] lg:gap-8">
+                <div class="lg:self-start lg:pt-10">
+                    <!-- lo de borded-b es lo que hace las lineas -->
+                    <h2 class="border-b border-granate pb-5 font-titulo text-5xl leading-compacto md:text-6x relative lg:border-b-0 lg:after:absolute lg:after:bottom-0 lg:after:right-0 lg:after:h-px lg:after:w-screen lg:after:bg-granate">Exposición<br><span class="block pl-12">mensual</span></h2>
+                    <p class="mt-5 text-sm">Cada mes, nuestro local se convierte en un espacio para descubrir el trabajo de artistas locales.</p>
+                </div>
+
+                <!-- texto circular: es un recorrido invisible que luego sigue el texto-->
+                <div class="relative mx-auto aspect-square w-full max-w-xl">
+                    <!-- viewBox establece unas coordenadas de 500x500 y size-full lo adapta al contenedor -->
+                    <!-- motion-safe:animate-spin motion-safe:[animation-duration:60s] para que gire -->
+                    <svg viewBox="0 0 500 500" class="pointer-events-none absolute inset-0 size-full motion-safe:animate-spin motion-safe:[animation-duration:60s]">
+                        <!-- defs es donde está el circulo invisible. M250, 250 es donde está el centro, una vez estás colocado en el centro m -220,0 te dice que levantes y te coloques a 220 unidades a la izq, y ahi es donde se empieza a dibujar la circunferencia. luego cuando ya estás colocado ahi, a 220,220 0 1,1 440,0 y a 220,220 0 1,1 -440,0 dibujan cada una medio círculo -->
+                        <defs>
+                            <path id="circulo-expo" d="M 250,250
+                             m -220,0
+                             a 220,220 0 1,1 440,0
+                             a 220,220 0 1,1 -440,0">
+                            </path>
+                        </defs>
+
+                        <!-- al poner href="#circulo-expo" conectamos el texto con el recorrido que tiene que seguir, textLength="1382 para q ocupe más o menos toda la circuncerencia y lengthAdjust="spacing" ajusta los espacios para llegar a esa longitud  -->
+                        <text fill="currentColor" class="font-texto text-[12px] uppercase">
+                            <textPath href="#circulo-expo" textLength="1382" lengthAdjust="spacing">EXPOSICIÓN MENSUAL EN PIZCA · ESTE MES: JOSE LUIS RANZ   EXPOSICIÓN MENSUAL EN PIZCA · ESTE MES: JOSE LUIS RANZ   EXPOSICIÓN MENSUAL EN PIZCA · ESTE MES: JOSE LUIS RANZ </textPath>
+                        </text>
+                    </svg>
+
+                    <!-- para que las fotos cambien al hacer clic, las hago como un button que cambie con js -->
+                    <!-- top-1/2 left-1/2 para ponerlo en la esquina arriba izq del contenedor y -translate-x-1/2 -translate-y-1/2 lo desplaza la mitad de su tamaño para centrarlo mejor -->
+                    <!-- touch-pan-y para poder seguir haciendo scroll vertical -->
+                    <button id="carrusel-expo" type="button" class="absolute top-1/2 left-1/2 aspect-[4/4] w-[58%] -translate-x-1/2 -translate-y-1/2 touch-pan-y  cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-granate">
+                        <!-- lo de foto-expo está creado en el css con  el borde blanco, la sombra, la animación... -->
+                        <!-- data-pos="0" indica la posición en la fila -->
+                        <img src="imagenes/expo-presentacion.webp" alt="" draggable="false" class="foto-expo" data-pos="0">
+                        <img src="imagenes/expo-cuadros.webp" alt="" draggable="false" class="foto-expo" data-pos="1">
+                        <img src="imagenes/expo-mascuadros.webp" alt="" draggable="false" class="foto-expo" data-pos="2">
+                        <img src="imagenes/expo-artista.webp" alt="" draggable="false" class="foto-expo" data-pos="3">
+                    </button>
+
+                    <p id="estado-expo" class="sr-only" aria-live="polite">Foto 1 de 4</p>
+
+                </div>
+                
+                <div class="lg:self-end lg:pb-10">
+                    <h3 class="border-b border-granate pb-5 font-titulo text-5xl leading-compacto md:text-6xl relative lg:border-b-0 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:h-px lg:after:w-screen lg:after:bg-granate">Noviembre<br>es de…</h3>
+                    <p class="mt-5 text-sm"> José Luis Ranz, que llena Pizca de rincones, paisajes y pequeños detalles que a veces pasan desapercibidos. ¡Una exposición para mirar con calma y disfrutar!.</p>
                 </div>
             </div>
         </section>
