@@ -125,3 +125,13 @@ html {
         animation: none;
     }
 }
+
+html.dark {
+    --color-granate: #FAFAF1;
+    --color-crema: #681211;
+}
+
+/* Imágenes blancas de la interfaz (logo, subrayados): en oscuro sobre fondo claro se perderían */
+html.dark img[src^="css/img/"] {
+    filter: brightness(0);
+}
