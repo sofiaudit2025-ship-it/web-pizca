@@ -44,17 +44,13 @@
 <body class="bg-granate font-texto text-crema antialiased transition-colors duration-500">
 
     <!-- ================= CABECERA ================= -->
-    <header class="sticky top-0 z-20 border-b border-crema/30 bg-granate/95 backdrop-blur text-crema">
+    <header class="sticky top-0 z-20 border-b border-crema/30 bg-granate/95 backdrop-blur text-crema font-texto">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4 md:flex-nowrap">
             <a href="index.html" class="block shrink-0 md:flex-1">
                 <img src="css/img/logo-sinestrella-blanco.webp" alt="Pizca" class="h-9 w-auto md:h-12">
             </a>
 
             <div class="flex shrink-0 items-center items-center justify-end gap-2 md:order-last md:flex-1">
-                <!-- este botón cambia entre modo claro y oscuro -->
-                <!-- <button id="boton-tema" type="button" aria-label="cambiar tema" aria-pressed="false"
-                        class=" inline-flex size-11 shrink-0 items-center justify-center rounded-full text-crema/70 hover:bg-crema/10 hover:text-crema">Cambiar tema
-                </button> -->
 
                 <!-- este botón abre y cierra el menú en móvil -->
                 <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
@@ -65,19 +61,9 @@
                 <a href="carta.html" class="hidden min-h-11 items-center gap-6 rounded-full border border-crema/40 px-6 py-2 text-xs uppercase hover:bg-crema hover:text-granate md:inline-flex">Pedir ahora<span aria-hidden="true">→</span></a>
             </div>
 
-            <!-- navegador sin las lineas subrayando -->
-            <!-- <nav class="w-full md:ml-auto md:w-auto" aria-label="Principal">
-                <ul id="menu" class="hidden space-y-2 pb-2 text-sm uppercase md:flex md:items-center md:gap-8 md:space-y-0 md:pb-0">
-                    <li><a href="#inicio" class="block py-2 hover:text-crema/70">Inicio</a></li>
-                    <li><a href="#productos" class="block py-2 hover:text-crema/70">Carta</a></li>
-                    <li><a href="#preguntas" class="block py-2 hover:text-crema/70">Sobre nosotros</a></li>
-                    <li><a href="#visitanos" class="block py-2 hover:text-crema/70">Reserva</a></li>
-                </ul>
-            </nav> -->
-
              <!-- navegador con las lineas subrayando -->
-            <nav class="w-full md:w-auto md:shrink-0" aria-label="Principal">
-                <ul id="menu" class="hidden space-y-2 pb-2 text-sm uppercase md:flex md:items-center md:gap-8 md:space-y-0 md:pb-0">
+            <nav id="panel-menu" class="invisible absolute top-full left-0 w-full h-[50dvh] overflow-y-auto -translate-y-4 opacity-0 transition-[opacity,translate,visibility] duration-300 ease-out motion-reduce:transition-none md:static md:visible md:h-auto md:w-auto md:shrink-0 md:translate-y-0 md:opacity-100 border-[0.5px] border-crema/30 rounded-b-3xl md:border-0 md:rounded-none">
+                <ul id="menu" class="flex h-full flex-col items-center justify-center gap-6 text-lg uppercase md:h-auto md:flex-row md:gap-8 md:text-sm">
                     <!-- para poner la imagen de la linea le doy la propiedad group al enlace del menu y a la imagen le digo que al pasar por group se active -->
                     <li><a href="carta.html" class="group relative inline-block py-2 hover:text-crema/85">Carta<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
                     <li><a href="sobrenosotros.html" class="group relative inline-block py-2 hover:text-crema/85">Sobre nosotros<img src="css/img/subrayado-manuscrito.webp" alt="" class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-full group-hover:block"></a></li>
@@ -131,6 +117,14 @@
                 <img src="imagenes/p-pizca.webp" alt="" draggable="false" class="pointer-events-none absolute top-0 -left-1/4 h-full w-[150%] max-w-none object-contain motion-safe:animate-spin motion-safe:[animation-duration:35s] motion-safe:[animation-direction:reverse] transition-[scale] duration-300 ease-out motion-safe:group-hover:scale-105">
             </div>
 
+            <!-- garabatos estrellas -->
+             <div class="pointer-events-none absolute inset-0 hidden select-none md:block">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute top-[8%] left-[13%] h-auto w-7 opacity-60">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute top-[42%] left-[40%] h-auto w-12 opacity-60">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute top-[49%] right-[18%] h-auto w-6 opacity-60">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute bottom-[12%] left-[18%] h-auto w-6 opacity-60">
+                <img src="iconos/estrella-pizca.svg" alt="" class="absolute bottom-[15%] right-[19%] h-auto w-6 opacity-60">
+             </div>
 
             <h1 class=" font-titulo text-5xl leading-ajustado uppercase sm:text-portada-sm lg:text-portada-md 2xl:text-portada-xl">Pizzería Pizca</h1>
             <p class="mt-4 font-titulo text-3xl leading-ajustado uppercase sm:text-sub-m lg:text-sub-l 2xl:text-sub-xl">Como el primer día</p>

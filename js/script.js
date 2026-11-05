@@ -68,3 +68,20 @@ $(function () {
     }
 });
 
+
+
+
+// Abrir y cerrar el panel del menú
+$(function () {
+    $('#boton-menu').on('click', function () {
+        const abierto = $(this).attr('aria-expanded') !== 'true';
+
+        $('#panel-menu').toggleClass(
+            'invisible opacity-0 -translate-y-4',
+            !abierto
+        );
+
+        $(this).attr('aria-expanded', abierto);
+        $(this).text(abierto ? 'Cerrar' : 'Menú');
+    });
+});
