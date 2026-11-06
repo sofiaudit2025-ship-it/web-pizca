@@ -1,3 +1,29 @@
+// Ocultar la pantalla de carga
+const inicioCarga = Date.now();
+const duracionMinima = 500;
+
+function ocultarPantallaCarga() {
+    const pantalla = document.getElementById('pantalla-carga');
+
+    if (!pantalla) return;
+
+    const tiempoPasado = Date.now() - inicioCarga;
+    const espera = Math.max(0, duracionMinima - tiempoPasado);
+
+    setTimeout(function () {
+        pantalla.classList.add('opacity-0', 'invisible');
+    }, espera);
+}
+
+// Si ya terminó de cargar, la ocultamos.
+// Si todavía está cargando, esperamos.
+if (document.readyState === 'complete') {
+    ocultarPantallaCarga();
+} else {
+    window.addEventListener('load', ocultarPantallaCarga);
+}
+
+
 $(function () {
     $('#pizza-movible').on('click', function () {
         const $img = $(this).find('img');
