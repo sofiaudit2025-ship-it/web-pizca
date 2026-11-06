@@ -1,27 +1,67 @@
-// Ocultar la pantalla de carga
+// pantalla de carga
+const pantallaCarga = document.getElementById('pantalla-carga');
+const trenCarga = document.getElementById('tren-carga');
+const recorridoTren = document.getElementById('recorrido-tren');
+const textoCarga = document.getElementById('texto-carga');
+
+const imagenesCarga = document.querySelectorAll('img');
+
 const inicioCarga = Date.now();
-const duracionMinima = 500;
+const duracionMinima = 1000;
 
-function ocultarPantallaCarga() {
-    const pantalla = document.getElementById('pantalla-carga');
+let imagenesTerminadas = 0;
 
-    if (!pantalla) return;
+// q el tren se mueva de izq a derecha
+function actualizarCarga(porcentaje) {
+    const distancia = recorridoTren.clientWidth - trenCarga.offsetWidth;
+    const desplazamiento = distancia * porcentaje / 100;
+
+    trenCarga.style.transform = 'translateX(' + desplazamiento + 'px)';
+    textoCarga.textContent = 'Cargando… ' + porcentaje + '%';
+}
+
+// esto es para como contar cada imagen de la web que va terminando de cargar, para saber cuando está la web lista
+function contarImagen() {
+    imagenesTerminadas++;
+
+    const porcentaje = Math.round(
+        imagenesTerminadas / imagenesCarga.length * 90
+    );
+
+    actualizarCarga(porcentaje);
+}
+
+// y esto para comprobarlas
+imagenesCarga.forEach(function (imagen) {
+    if (imagen.complete) {
+        contarImagen();
+    } else {
+        imagen.addEventListener('load', contarImagen);
+        imagen.addEventListener('error', contarImagen);
+    }
+});
+
+
+// completar el recorrido y ocultar la pantalla de carga
+function terminarCarga() {
+    actualizarCarga(100);
 
     const tiempoPasado = Date.now() - inicioCarga;
-    const espera = Math.max(0, duracionMinima - tiempoPasado);
+    const espera = Math.max(500, duracionMinima - tiempoPasado);
 
     setTimeout(function () {
-        pantalla.classList.add('opacity-0', 'invisible');
+        pantallaCarga.classList.add('opacity-0', 'invisible');
     }, espera);
 }
 
-// Si ya terminó de cargar, la ocultamos.
-// Si todavía está cargando, esperamos.
 if (document.readyState === 'complete') {
-    ocultarPantallaCarga();
+    terminarCarga();
 } else {
-    window.addEventListener('load', ocultarPantallaCarga);
+    window.addEventListener('load', terminarCarga);
 }
+
+
+
 
 
 $(function () {
