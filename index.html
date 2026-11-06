@@ -44,6 +44,21 @@
 </head>
 <body class="bg-granate font-texto text-crema antialiased transition-colors duration-500">
 
+    <!-- página de carga, como se me olvidó crearla como index.html para que saliese lo primero, en vez de hacer una página solo para esto, lo hago con una ventana -->
+     <div id="pantalla-carga" class="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-6 bg-granate text-crema transition-all duration-500 motion-reduce:transition-none">
+        <span class="shape logo-menu block w-48 md:w-64"></span>
+        <p id="texto-carga" class="text-sm uppercase">Cargando...</p>
+
+        <div id="recorrido-tren" class="absolute right-5 bottom-10 left-5">
+            <div id="tren-carga" class="absolute left-0 bottom-full w-64 max-w-[70%] transition-transform duration-500 motion-reduce:transition-none md:w-96">
+                <img src="imagenes/tren.webp" alt="" class="block w-full translate-y-1/4">
+            </div>
+            <div class="vias-carga w-full"></div>
+
+        </div>
+     </div>
+
+
     <!-- ================= CABECERA ================= -->
     <header class="sticky top-0 z-20 border-b border-crema/30 bg-granate/95 backdrop-blur text-crema font-texto">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4 md:flex-nowrap">
