@@ -1,65 +1,68 @@
-// pantalla de carga
-const pantallaCarga = document.getElementById('pantalla-carga');
-const trenCarga = document.getElementById('tren-carga');
-const recorridoTren = document.getElementById('recorrido-tren');
-const textoCarga = document.getElementById('texto-carga');
+setTimeout(function () {
+    
+    // pantalla de carga
+    const pantallaCarga = document.getElementById('pantalla-carga');
+    const trenCarga = document.getElementById('tren-carga');
+    const recorridoTren = document.getElementById('recorrido-tren');
+    const textoCarga = document.getElementById('texto-carga');
 
-const imagenesCarga = document.querySelectorAll('img');
+    const imagenesCarga = document.querySelectorAll('img');
 
-const inicioCarga = Date.now();
-const duracionMinima = 1000;
+    const inicioCarga = Date.now();
+    const duracionMinima = 1000;
 
-let imagenesTerminadas = 0;
+    let imagenesTerminadas = 0;
 
-// q el tren se mueva de izq a derecha
-function actualizarCarga(porcentaje) {
-    const distancia = recorridoTren.clientWidth - trenCarga.offsetWidth;
-    const desplazamiento = distancia * porcentaje / 100;
+    // q el tren se mueva de izq a derecha
+    function actualizarCarga(porcentaje) {
+        const distancia = recorridoTren.clientWidth - trenCarga.offsetWidth;
+        const desplazamiento = distancia * porcentaje / 100;
 
-    trenCarga.style.transform = 'translateX(' + desplazamiento + 'px)';
-    textoCarga.textContent = 'Cargando… ' + porcentaje + '%';
-}
-
-// esto es para como contar cada imagen de la web que va terminando de cargar, para saber cuando está la web lista
-function contarImagen() {
-    imagenesTerminadas++;
-
-    const porcentaje = Math.round(
-        imagenesTerminadas / imagenesCarga.length * 90
-    );
-
-    actualizarCarga(porcentaje);
-}
-
-// y esto para comprobarlas
-imagenesCarga.forEach(function (imagen) {
-    if (imagen.complete) {
-        contarImagen();
-    } else {
-        imagen.addEventListener('load', contarImagen);
-        imagen.addEventListener('error', contarImagen);
+        trenCarga.style.transform = 'translateX(' + desplazamiento + 'px)';
+        textoCarga.textContent = 'Cargando… ' + porcentaje + '%';
     }
-});
+
+    // esto es para como contar cada imagen de la web que va terminando de cargar, para saber cuando está la web lista
+    function contarImagen() {
+        imagenesTerminadas++;
+
+        const porcentaje = Math.round(
+            imagenesTerminadas / imagenesCarga.length * 90
+        );
+
+        actualizarCarga(porcentaje);
+    }
+
+    // y esto para comprobarlas
+    imagenesCarga.forEach(function (imagen) {
+        if (imagen.complete) {
+            contarImagen();
+        } else {
+            imagen.addEventListener('load', contarImagen);
+            imagen.addEventListener('error', contarImagen);
+        }
+    });
 
 
-// completar el recorrido y ocultar la pantalla de carga
-function terminarCarga() {
-    actualizarCarga(100);
+    // completar el recorrido y ocultar la pantalla de carga
+    function terminarCarga() {
+        actualizarCarga(100);
 
-    const tiempoPasado = Date.now() - inicioCarga;
-    const espera = Math.max(500, duracionMinima - tiempoPasado);
+        const tiempoPasado = Date.now() - inicioCarga;
+        const espera = Math.max(500, duracionMinima - tiempoPasado);
 
-    setTimeout(function () {
-        pantallaCarga.classList.add('opacity-0', 'invisible');
-    }, espera);
-}
+        setTimeout(function () {
+            pantallaCarga.classList.add('opacity-0', 'invisible');
+        }, espera);
+    }
 
-if (document.readyState === 'complete') {
-    terminarCarga();
-} else {
-    window.addEventListener('load', terminarCarga);
-}
+    if (document.readyState === 'complete') {
+        terminarCarga();
+    } else {
+        window.addEventListener('load', terminarCarga);
+    }
 
+}, 1000);
 
 
 
