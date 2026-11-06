@@ -38,6 +38,27 @@
         cursor: pointer;
     }
 
+    /* Pizza del mes: pista visual de que se puede pulsar */
+#pizza-movible img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+@media (hover: hover) {
+    #pizza-movible:hover img {
+        transform: scale(1.00) rotate(-6deg);
+        filter: drop-shadow(0 12px 20px rgb(0 0 0 / 0.25));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #pizza-movible img {
+        transition: none;
+    }
+    #pizza-movible:hover img {
+        transform: none;
+    }
+}
+
     #pizza-movible img {
         transform-origin: center;
     }
@@ -158,13 +179,4 @@ html.dark img[src="imagenes/subrayado-manuscrito.webp"] {
     background: var(--color-crema);
 }
 
-/* Etiquetas de alérgenos */
-.alergeno {
-    display: inline-block;
-    margin: 0.2rem;
-    padding: 0.25rem 0.75rem;
-    border: 1px solid var(--color-crema);
-    border-radius: 999px;
-    font-size: 12px;
-    text-transform: uppercase;
-}
+
