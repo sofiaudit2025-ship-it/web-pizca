@@ -51,8 +51,8 @@
         <p id="texto-carga" class="text-sm uppercase">Cargando...</p>
 
         <div id="recorrido-tren" class="absolute right-5 bottom-10 left-5">
-            <div id="tren-carga" class="absolute left-0 bottom-full w-64 max-w-[70%] transition-transform duration-500 motion-reduce:transition-none md:w-96">
-                <img src="imagenes/tren.webp" alt="" class="block w-full translate-y-1/4">
+            <div id="tren-carga" class="absolute left-0 bottom-full w-72 max-w-[85%] transition-transform duration-500 motion-reduce:transition-none md:w-[28rem]">
+                <img src="imagenes/tren.webp" alt="" class="block w-full translate-y-[28%]">
             </div>
             <div class="vias-carga w-full"></div>
 
@@ -361,7 +361,7 @@
                 <!-- contacto -->
                 <div class="lg:border-r lg:border-crema/40 lg:pr-6">
                     <address class="text-sm">
-                        <p>C. Virgen del Amparo, 12<br>19002 Guadalajara, España</p>
+                        <a href="https://www.google.com/maps/dir//Pizzer%C3%ADa+Pizca,+C.+del+Cardenal+Gonz%C3%A1lez+de+Mendoza,+21,+19004+Guadalajara/@40.6338478,-3.1735743,749m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0xd43ab82501ba363:0x80d05579d4d04c6f!2m2!1d-3.1709994!2d40.6338478!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D">C. Virgen del Amparo, 12<br>19002 Guadalajara, España</a>
                         <p class="mt-4">
                             <a href="tel:+34949217154">(+34) 949 21 71 54</a>
                             <br>
@@ -456,6 +456,33 @@
          </div>
      </footer>
 
+    <!-- esto para las cookies ya que tenemos tiempo -->
+     <button id="gestionar-cookies" type="button" class="fixed bottom-0 left-5 z-[60] rounded-t-xl border border-granate/30 bg-crema px-5 py-3 text-sm text-granate shadow-md transition-transform duration-300 md:translate-y-[85%] md:hover:translate-y-0 md:focus-visible:translate-y-0">Gestionar cookies</button>
+
+    <!-- esto es paner que sale al hacer clic, dialog es para crear la ventana que se abra encima -->
+    <dialog id="panel-cookies" class="fixed top-auto right-auto bottom-20 left-5 m-0 max-h-[500px] w-[calc(100%-2.5rem)] max-w-md overflow-y-auto rounded-2xl border border-granate/30 bg-crema p-6 text-granate shadow-xl backdrop:bg-black/20">
+        <div class="flex items-center justify-between gap-4">
+            <h2 id="titulo-cookies" class="font-titulo text-2xl uppercase">Gestionar cookies</h2>
+            <button id="cerrar-cookies" class="flex size-11 shrink-0 items-center justify-center text-2xl">×</button>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed">Puedes elegir tus preferencias y cambiarlas cuando quieras desde este panel.</p>
+        <div class="mt-6 grid grid-cols-2 gap-3">
+            <button id="aceptar-cookies" class="rounded-full border border-granate bg-granate px-4 py-3 text-sm text-crema">Aceptar</button>
+            <button id="rechazar-cookies" class="rounded-full border border-granate pc-4 py-3 text-sm">Rechazar</button>
+        </div>
+
+        <button id="ver-preferencias" class="mt-4 text-sm underline underline-offset-4">Ver preferencias</button>
+
+        <div id="preferencias-cookies" class="mt-5 hidden border-t border-granate/30 pt-5">
+            <p class="text-sm">Cookies necesarias: siempre activas.</p>
+            <label class="mt-4 flex items-center gap-3 text-sm">
+                <input id="cookies-estadisticas" class="size-4 accent-granate">
+                Cookies de estadísticas
+            </label>
+
+            <button id="guardar-cookies" class="mt-5 rounded-full border border-granate px-5 py-3 text-sm">Guardar preferencias</button>
+        </div>
+    </dialog>
 
 
     <!-- este es el botón para cambiar de modo oscuro a claro, que se queda fijo en la página en vez de meterlo en el menú -->
@@ -469,5 +496,6 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/cookies.js"></script>
 </body>
 </html>
