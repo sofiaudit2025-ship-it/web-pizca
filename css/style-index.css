@@ -107,3 +107,13 @@
         background: var(--color-crema);
     }
 }
+
+
+/* la carga solo aparece cuando autorizo */
+#pantalla-carga {
+    display: none;
+}
+
+html.mostrar-carga #pantalla-carga {
+    display: flex;
+}
