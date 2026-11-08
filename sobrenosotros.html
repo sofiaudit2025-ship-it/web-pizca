@@ -602,7 +602,16 @@
 
     <!-- este es el botón para cambiar de modo oscuro a claro, que se queda fijo en la página en vez de meterlo en el menú -->
      <!-- lo de focus es para cuando navegas sin ratón, con el tab --> 
-    <button id="boton-tema" type="button" aria-label="Cambiar tema" aria-pressed="false" class="fixed right-5 bottom-5 z-50 inline-flex size-11 items-center justify-center rounded-full border border-crema/40 bg-granate text-crema hover:border-crema focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-crema"><i class="fa-solid fa-moon"></i></button>
+    <div class="fixed right-5 bottom-5 z-50 flex items-end gap-3">
+        <button id="boton-tema" type="button" aria-label="Cambiar tema" aria-pressed="false"
+                class="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-crema/40 bg-granate text-lg text-crema hover:border-crema focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-crema">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <a href="tel:+34949217154" aria-label="Llamar a Pizca: 949 217 154" title="Llamar al 949 217 154"
+           class="inline-flex size-16 shrink-0 items-center justify-center rounded-full border border-crema/40 bg-granate text-2xl text-crema shadow-lg hover:border-crema focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-crema">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        </a>
+    </div>
 
     <script src="js/tema.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
