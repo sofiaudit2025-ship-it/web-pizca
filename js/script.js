@@ -2,6 +2,12 @@ setTimeout(function () {
     
     // pantalla de carga
     const pantallaCarga = document.getElementById('pantalla-carga');
+
+    if (!pantallaCarga ||
+    !document.documentElement.classList.contains('mostrar-carga')) {
+    return;
+}
+
     const trenCarga = document.getElementById('tren-carga');
     const recorridoTren = document.getElementById('recorrido-tren');
     const textoCarga = document.getElementById('texto-carga');
