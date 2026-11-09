@@ -272,8 +272,12 @@
          </div>
      </footer>
 
-         <!-- esto para las cookies ya que tenemos tiempo -->
-     <button id="gestionar-cookies" type="button" class="fixed bottom-0 left-5 z-[60] rounded-t-xl border border-granate/30 bg-crema px-5 py-3 text-sm text-granate shadow-md transition-transform duration-300 md:translate-y-[85%] md:hover:translate-y-0 md:focus-visible:translate-y-0">Gestionar cookies</button>
+    <!-- esto para las cookies ya que tenemos tiempo -->
+    <!-- he puesto que en movil se ponga en una esquina y un icono en vez de texto para que no ocupe tanto  -->
+     <button id="gestionar-cookies" type="button" class="fixed bottom-0 left-0 z-[60] flex size-11 items-center justify-center rounded-tr-xl border border-granate/30 bg-crema text-xl text-granate shadow-md transition-transform duration-300 md:left-5 md:h-auto md:w-auto md:rounded-t-xl md:px-5 md:py-3 md:text-sm md:translate-y-[85%] md:hover:translate-y-0 md:focus-visible:translate-y-0">
+        <span class="md:hidden" aria-hidden="true"><i class="fa-solid fa-cookie-bite"></i></span>
+        <span class="hidden md:inline">Gestionar cookies</span>
+    </button>
 
     <!-- esto es paner que sale al hacer clic, dialog es para crear la ventana que se abra encima -->
     <dialog id="panel-cookies" class="fixed top-auto right-auto bottom-20 left-5 m-0 max-h-[500px] w-[calc(100%-2.5rem)] max-w-md overflow-y-auto rounded-2xl border border-granate/30 bg-crema p-6 text-granate shadow-xl backdrop:bg-black/20">
